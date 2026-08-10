@@ -303,8 +303,16 @@ input[type=checkbox] { accent-color: var(--accent); }
   border-radius: 0 0 9px 9px; text-align: center;
 }
 .submit-cta b { color: var(--accent); font-size: .95rem; }
-.submit-cta span { color: var(--muted); font-size: .8rem; }
-.submit-tile:hover .submit-cta span { color: var(--accent); }
+.submit-where {
+  display: inline-flex; align-items: center; gap: .32rem;
+  color: var(--muted); font-size: .8rem;
+}
+.submit-where .gh { width: 13px; height: 13px; fill: currentColor; flex-shrink: 0; }
+.submit-where .ext {
+  width: 10px; height: 10px; flex-shrink: 0; fill: none; stroke: currentColor;
+  stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; opacity: .7;
+}
+.submit-tile:hover .submit-where { color: var(--accent); }
 .submit-tile:hover .submit-cta { background: linear-gradient(to top, var(--row-hover) 62%, transparent); }
 
 @media (prefers-reduced-motion: reduce) { .sk::after { display: none; } }
