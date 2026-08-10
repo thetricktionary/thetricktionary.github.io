@@ -1,0 +1,7 @@
+__pycache__/
+*.pyc
+Trash/
+.DS_Store
+
+# Agent instructions: local to the working copy, not part of the published site
+CLAUDE.md
