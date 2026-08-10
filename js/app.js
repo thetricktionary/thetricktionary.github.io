@@ -21,26 +21,131 @@ var KEY_THEME = 'tt-theme';
    page it was compiled from. */
 var PDF_HREF = 'assets/the-tricktionary-v1.pdf';
 
-/* progress[slug] = 0..3 mastery stars. 0 (or absent) means not landed yet. */
-var progress = load(KEY_PROGRESS, {});
+/* Where a rescued copy goes if the stored progress ever fails to parse. Never
+   written over, so it survives until the user exports or clears it. */
+var KEY_RESCUED = 'tt-progress-rescued';
+var KEY_SCHEMA = 'tt-schema';
+var SCHEMA = 1;
+
+/* ── storage durability ───────────────────────────────────────────────────
+   Progress lives in localStorage, which is scoped to the origin and not to
+   any file, so deploying new code does not touch it: a user keeps their stars
+   across every update. There is no service worker, so nothing clears caches
+   or storage on release either.
+
+   What CAN lose progress, and what is done about it here:
+
+   - Storage unreadable or corrupt. Previously a parse failure silently
+     returned {} and the next star click wrote that empty object straight over
+     the top. Now the raw string is copied aside to KEY_RESCUED first and the
+     user is told, so nothing is destroyed by a bad read.
+   - Storage unwritable (private mode, blocked site data, quota). Previously
+     swallowed, so the app looked like it was saving when it was not. Now the
+     write is checked and the user is told once.
+   - A trick's slug changing in a data rebuild. Stars are keyed by slug, so a
+     rename would orphan them. SLUG_ALIASES in data.js maps old to new and is
+     applied on load; tools/build-data.py fails the build if a slug vanishes
+     without one, so this cannot happen silently.
+   - Unknown slugs (progress written by a newer or older build) are kept as
+     they are rather than dropped, so moving between versions is lossless.
+
+   What is outside the app's reach, and why Export matters:
+   - Moving to a custom domain changes the origin, and localStorage does not
+     follow. Export first, import after.
+   - Safari evicts script-written storage after ~7 days without a visit.
+   - The user clearing site data.
+*/
+var storageOK = true;      // false once a read or write has failed
+var rescuedProgress = false;
+
+function storageGet(key) {
+  try { return localStorage.getItem(key); } catch (e) { storageOK = false; return null; }
+}
+
+function storageSet(key, str) {
+  try {
+    localStorage.setItem(key, str);
+    /* Read back rather than trusting the write: Safari's private mode has
+       historically accepted setItem and thrown only on some paths, and a
+       quota failure part-way through is worth catching here rather than on
+       the next page load. */
+    return localStorage.getItem(key) === str;
+  } catch (e) {
+    storageOK = false;
+    return false;
+  }
+}
+
+function load(key, fallback) {
+  var raw = storageGet(key);
+  if (!raw) return fallback;
+  try { return JSON.parse(raw); } catch (e) { return fallback; }
+}
+
+function save(key, value) {
+  return storageSet(key, JSON.stringify(value));
+}
+
+/* Reads the stored progress without ever destroying what is there. */
+function loadProgress() {
+  var raw = storageGet(KEY_PROGRESS);
+  if (!raw) return {};
+  var parsed;
+  try { parsed = JSON.parse(raw); } catch (e) { parsed = null; }
+  if (!parsed || typeof parsed !== 'object' || parsed.constructor === Array) {
+    /* Keep the unreadable original: it may still be recoverable by hand, and
+       overwriting it would be the one truly unrecoverable move. */
+    if (!storageGet(KEY_RESCUED)) storageSet(KEY_RESCUED, raw);
+    rescuedProgress = true;
+    return {};
+  }
+  var out = {};
+  Object.keys(parsed).forEach(function (slug) {
+    var n = parseInt(parsed[slug], 10);
+    /* Clamp rather than discard: a value above 3 is still someone saying they
+       have landed the trick, and dropping it would lose that. */
+    if (n >= 1) out[slug] = Math.min(3, n);
+  });
+  return migrateSlugs(out);
+}
+
+/* Carries stars over when a trick's slug changes between builds. Keeps the
+   higher level if both the old and new slug somehow have one. */
+function migrateSlugs(p) {
+  var aliases = (typeof SLUG_ALIASES !== 'undefined') ? SLUG_ALIASES : {};
+  var moved = 0;
+  Object.keys(aliases).forEach(function (from) {
+    if (!(from in p)) return;
+    var to = aliases[from];
+    p[to] = Math.max(p[to] || 0, p[from]);
+    delete p[from];
+    moved++;
+  });
+  if (moved) save(KEY_PROGRESS, p);
+  return p;
+}
+
+/* progress[slug] = 1..3 mastery stars. Absent means not landed yet. */
+var progress = loadProgress();
 var bySlug = {};
 TRICKS.forEach(function (t) { bySlug[t.slug] = t; });
 
 var filters = { q: '', diff: '', cat: '', prog: '' };
 
-/* ── storage ──────────────────────────────────────────────────────────── */
-function load(key, fallback) {
-  try {
-    var raw = localStorage.getItem(key);
-    return raw ? JSON.parse(raw) : fallback;
-  } catch (e) { return fallback; }
-}
-function save(key, value) {
-  try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) {}
-}
 function saveProgress() {
-  save(KEY_PROGRESS, progress);
+  var ok = save(KEY_PROGRESS, progress);
+  save(KEY_SCHEMA, SCHEMA);
+  if (!ok && storageOK !== false) storageOK = false;
+  if (!ok) warnStorageOnce();
   renderProgCount();
+  renderStorageStatus();
+}
+
+var warnedStorage = false;
+function warnStorageOnce() {
+  if (warnedStorage) return;
+  warnedStorage = true;
+  toast('This browser is not saving progress. See Settings.');
 }
 function stars(slug) { return progress[slug] || 0; }
 function setStars(slug, n) {
@@ -86,7 +191,7 @@ function loadIso() {
   if (isoState !== 'idle') return;
   isoState = 'loading';
   var s = document.createElement('script');
-  s.src = 'js/iso.js?v=9';
+  s.src = 'js/iso.js?v=11';
   s.onerror = function () { isoState = 'failed'; paintIso(); };
   document.head.appendChild(s);
 }
@@ -561,21 +666,59 @@ function renderSources() {
   }).join('');
 }
 
+/* Says plainly whether this browser is actually keeping progress, and flags a
+   rescued copy if a bad read was ever quarantined. */
+function renderStorageStatus() {
+  var el = $('#storageStatus');
+  if (!el) return;
+  var n = Object.keys(progress).length;
+  var html;
+  if (!storageOK) {
+    html = '<b class="warn">This browser is not saving your progress.</b> ' +
+      'Private windows and blocked site data both do this. Export before you close the tab, ' +
+      'or reopen the site in a normal window.';
+  } else {
+    html = 'Saving normally: <b>' + n + '</b> trick' + (n === 1 ? '' : 's') + ' recorded in this browser. ' +
+      'Deploys of the site do not affect this; your stars survive every update.';
+  }
+  if (rescuedProgress) {
+    html += '<br><b class="warn">Earlier progress could not be read</b> and has been set aside ' +
+      'rather than overwritten, under the key <code>' + KEY_RESCUED + '</code> in this browser\'s storage.';
+  }
+  el.innerHTML = html;
+}
+
+/* Local time, not UTC, so the name matches the clock the user just looked at.
+   Ordered largest unit first so the files sort chronologically in any file
+   browser, and punctuated with hyphens because a colon is not a legal filename
+   character on Windows. */
+function stamp(d) {
+  function p(n) { return (n < 10 ? '0' : '') + n; }
+  return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate()) +
+         '-' + p(d.getHours()) + p(d.getMinutes());
+}
+
 function exportProgress() {
+  var now = new Date();
   var payload = {
     app: 'thetricktionary',
     version: 1,
-    exported: new Date().toISOString(),
+    exported: now.toISOString(),
     theme: document.documentElement.className,
     progress: progress
   };
+  /* Every export keeps its own name, so backups accumulate instead of the
+     browser silently appending "(1)" and leaving you to guess which is newest. */
+  var name = 'tricktionary-progress-' + stamp(now) + '.json';
   var blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
   var a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = 'tricktionary-progress.json';
+  a.download = name;
   a.click();
   setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
-  $('#ioStatus').textContent = 'Exported ' + Object.keys(progress).length + ' tricks.';
+  var n = Object.keys(progress).length;
+  $('#ioStatus').textContent =
+    'Exported ' + n + ' trick' + (n === 1 ? '' : 's') + ' to ' + name;
 }
 
 function importProgress(file) {
@@ -590,18 +733,24 @@ function importProgress(file) {
     }
     /* Merge rather than replace, keeping whichever side has the higher star
        level, so importing an old backup can never take progress away. */
-    var added = 0;
+    var added = 0, carried = 0;
     Object.keys(data.progress).forEach(function (slug) {
-      if (!bySlug[slug]) return;
       var n = Math.max(0, Math.min(3, parseInt(data.progress[slug], 10) || 0));
-      if (n > (progress[slug] || 0)) { progress[slug] = n; added++; }
+      if (!n) return;
+      /* A slug this build does not know about is kept rather than dropped: it
+         may belong to a newer build, or to one this file predates, and either
+         way throwing it away would make the round trip lossy. */
+      if (!bySlug[slug]) { if (!progress[slug]) carried++; }
+      if (n > (progress[slug] || 0)) { progress[slug] = n; if (bySlug[slug]) added++; }
     });
+    migrateSlugs(progress);
     saveProgress();
     if (data.theme === 'light' || data.theme === 'dark') setTheme(data.theme);
     renderList(); renderProgression();
-    $('#ioStatus').textContent = added
+    $('#ioStatus').textContent = (added
       ? 'Imported: ' + added + ' tricks updated.'
-      : 'Nothing to add; this file matched what is already here.';
+      : 'Nothing to add; this file matched what is already here.') +
+      (carried ? ' ' + carried + ' entries from another version were kept as they are.' : '');
     toast('Progress imported');
   };
   reader.readAsText(file);
@@ -611,7 +760,8 @@ function importProgress(file) {
 function init() {
   setTheme(load(KEY_THEME, null) === 'light' ? 'light' : 'dark');
   renderChips(); renderList(); renderProgression(); renderBasics();
-  renderGlossary(''); renderSources(); renderProgCount();
+  renderGlossary(''); renderSources(); renderProgCount(); renderStorageStatus();
+  if (rescuedProgress) toast('Earlier progress could not be read. See Settings.');
 
   /* nav */
   $$('.tabs button').forEach(function (b) {
