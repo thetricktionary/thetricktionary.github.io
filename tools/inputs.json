@@ -1,0 +1,7862 @@
+{
+ "powerloop": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/powerloop/"
+   },
+   {
+    "label": "Rotor Riot",
+    "url": "https://rotorriot.com/blogs/tutorials-guides/fpv-freestyle-tricktionary"
+   },
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=Ip7JBqRNDzg"
+   }
+  ]
+ },
+ "matty-flip": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      0.3
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": true
+   },
+   {
+    "L": [
+     [
+      0,
+      0.4
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      0.3
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": true
+   }
+  ],
+  "originator": "Matty Stuttard",
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/matty-flip/"
+   },
+   {
+    "label": "Rotor Riot",
+    "url": "https://rotorriot.com/blogs/tutorials-guides/fpv-freestyle-tricktionary"
+   },
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=mZVjPSQHm9Y"
+   }
+  ]
+ },
+ "flip": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/flip/"
+   }
+  ]
+ },
+ "roll": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/roll/"
+   }
+  ]
+ },
+ "yaw-spin": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      1,
+      0
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/yaw-spin/"
+   },
+   {
+    "label": "Rotor Riot",
+    "url": "https://rotorriot.com/blogs/tutorials-guides/fpv-freestyle-tricktionary"
+   },
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=xB8kZMV1HGY"
+   }
+  ]
+ },
+ "split-s": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/split-s-2/"
+   },
+   {
+    "label": "Rotor Riot",
+    "url": "https://rotorriot.com/blogs/tutorials-guides/fpv-freestyle-tricktionary"
+   },
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=gepPp2OyXUQ"
+   }
+  ]
+ },
+ "gaps": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/gaps-2/"
+   },
+   {
+    "label": "Rotor Riot",
+    "url": "https://rotorriot.com/blogs/tutorials-guides/fpv-freestyle-tricktionary"
+   }
+  ]
+ },
+ "orbits": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/orbits/"
+   },
+   {
+    "label": "Rotor Riot",
+    "url": "https://rotorriot.com/blogs/tutorials-guides/fpv-freestyle-tricktionary"
+   },
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=XJDBezfCwyY"
+   }
+  ]
+ },
+ "immelmann": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/immelmann/"
+   },
+   {
+    "label": "Rotor Riot",
+    "url": "https://rotorriot.com/blogs/tutorials-guides/fpv-freestyle-tricktionary"
+   },
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=NIRiyWI668E"
+   }
+  ]
+ },
+ "wall-ride": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/wall-ride/"
+   },
+   {
+    "label": "Rotor Riot",
+    "url": "https://rotorriot.com/blogs/tutorials-guides/fpv-freestyle-tricktionary"
+   },
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=JJ9W8wpwsxA"
+   }
+  ]
+ },
+ "building-dive": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/building-dive/"
+   },
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=xCgcLMnap1g"
+   }
+  ]
+ },
+ "juicy-flick": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "originator": "Johnny Scars",
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/juicy-flick/"
+   },
+   {
+    "label": "Rotor Riot",
+    "url": "https://rotorriot.com/blogs/tutorials-guides/fpv-freestyle-tricktionary"
+   },
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=XTbEZPqFzBU"
+   }
+  ]
+ },
+ "juicy-double-roll": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ]
+ },
+ "trippy-spin": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/trippy-spin/"
+   },
+   {
+    "label": "Rotor Riot",
+    "url": "https://rotorriot.com/blogs/tutorials-guides/fpv-freestyle-tricktionary"
+   },
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=HbUVa1IUfFs"
+   }
+  ]
+ },
+ "snapback": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/snapback/"
+   }
+  ]
+ },
+ "vanny-roll": {
+  "inputs": [
+   {
+    "L": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "originator": "Alex Vanover (Captain Vanover)",
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/vanny-roll/"
+   },
+   {
+    "label": "Rotor Riot",
+    "url": "https://rotorriot.com/blogs/tutorials-guides/fpv-freestyle-tricktionary"
+   },
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=PpTKsZgn6h8"
+   }
+  ]
+ },
+ "inverted-yaw-spin": {
+  "inputs": [
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      1,
+      0
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/inverted-yaw-spin/"
+   },
+   {
+    "label": "Rotor Riot",
+    "url": "https://rotorriot.com/blogs/tutorials-guides/fpv-freestyle-tricktionary"
+   },
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=WunRnnUI4Wc"
+   }
+  ]
+ },
+ "half-matty": {
+  "inputs": [
+   {
+    "L": [
+     [
+      -0.7,
+      -0.7
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/half-matty/"
+   },
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=yyvGYJBwvcA"
+   }
+  ]
+ },
+ "split-yaw": {
+  "inputs": [
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -0.7,
+      -0.7
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/split-yaw/"
+   }
+  ]
+ },
+ "side-lock-rewind": {
+  "inputs": [
+   {
+    "L": null,
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": true
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/side-lock-rewind/"
+   },
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=Pp1Yowe2M-g"
+   }
+  ]
+ },
+ "loop-tap": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      -0.7,
+      -0.7
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/loop-tap/"
+   }
+  ]
+ },
+ "double-roll": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/double-roll/"
+   }
+  ]
+ },
+ "double-flip": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/double-flip/"
+   }
+  ]
+ },
+ "knife-edge": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/knife-edge/"
+   },
+   {
+    "label": "Rotor Riot",
+    "url": "https://rotorriot.com/blogs/tutorials-guides/fpv-freestyle-tricktionary"
+   },
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=FamqCNGrq2M"
+   }
+  ]
+ },
+ "cradle": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": true
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/cradle/"
+   }
+  ]
+ },
+ "wall-tap": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/wall-tap/"
+   }
+  ]
+ },
+ "slide-disarm": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/slide-disarm/"
+   }
+  ]
+ },
+ "anti-matty": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/anti-matty/"
+   }
+  ]
+ },
+ "reverse-wall-ride": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0.7,
+      -0.7
+     ]
+    ],
+    "R": [
+     [
+      0.7,
+      0.7
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -0.35,
+      0.35
+     ]
+    ],
+    "R": [
+     [
+      0.35,
+      0.35
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/reverse-wall-ride/"
+   },
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=2koGdcQ1XOU"
+   }
+  ]
+ },
+ "immelloop": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -0.5
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/immelloop/"
+   }
+  ]
+ },
+ "540-half-matty": {
+  "inputs": [
+   {
+    "L": null,
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/540-half-matty/"
+   }
+  ]
+ },
+ "stall-rewind": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/stall-rewind/"
+   }
+  ]
+ },
+ "jump-rope": {
+  "inputs": [
+   {
+    "L": [
+     [
+      1,
+      0
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/jump-rope/"
+   },
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=8gnH_YtaXak"
+   }
+  ]
+ },
+ "burrito-roll": {
+  "inputs": [
+   {
+    "L": [
+     [
+      1,
+      0
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/burrito-roll/"
+   }
+  ]
+ },
+ "maverick-loop": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/maverick-loop/"
+   }
+  ]
+ },
+ "power-matty": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/power-matty/"
+   }
+  ]
+ },
+ "splitback": {
+  "inputs": [
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": true
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/splitback/"
+   }
+  ]
+ },
+ "power-flip": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": true,
+    "Rh": true
+   },
+   {
+    "L": [
+     [
+      0,
+      0.4
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/power-flip/"
+   }
+  ]
+ },
+ "ceiling-tap": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/ceiling-tap/"
+   }
+  ]
+ },
+ "pole-dance": {
+  "inputs": [
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/pole-dance/"
+   }
+  ]
+ },
+ "matty-360": {
+  "inputs": [
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -0.7,
+      -0.7
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/matty-360/"
+   }
+  ]
+ },
+ "beginner-matty": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/beginner-matty/"
+   }
+  ]
+ },
+ "whiplash": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/whiplash/"
+   }
+  ]
+ },
+ "face-punch": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/face-punch/"
+   }
+  ]
+ },
+ "perch": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/perch/"
+   },
+   {
+    "label": "Rotor Riot",
+    "url": "https://rotorriot.com/blogs/tutorials-guides/fpv-freestyle-tricktionary"
+   }
+  ]
+ },
+ "side-loop": {
+  "inputs": [
+   {
+    "L": [
+     [
+      1,
+      0
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/side-loop/"
+   }
+  ]
+ },
+ "power-split": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": true
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/power-split/"
+   }
+  ]
+ },
+ "matty-twister": {
+  "inputs": [
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/matty-twister/"
+   }
+  ]
+ },
+ "downtown-tap": {
+  "inputs": [
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0.7,
+      -0.7
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/downtown-tap/"
+   }
+  ]
+ },
+ "stall-half-matty-rewind": {
+  "inputs": [
+   {
+    "L": null,
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/stall-half-matty-rewind/"
+   }
+  ]
+ },
+ "power-roll": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/power-roll/"
+   }
+  ]
+ },
+ "inverted-rewind": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/inverted-rewind/"
+   }
+  ]
+ },
+ "cinnamon-roll": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "originator": "Shauny D",
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/cinnamon-roll/"
+   }
+  ]
+ },
+ "segmented-flips-rolls": {
+  "inputs": [
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/segmented-flips-rolls/"
+   }
+  ]
+ },
+ "540-split-s": {
+  "inputs": [
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": true
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/540-split-s/"
+   }
+  ]
+ },
+ "stall-flip-rewind": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/stall-flip-rewind/"
+   }
+  ]
+ },
+ "mavvy-roll": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/mavvy-roll/"
+   }
+  ]
+ },
+ "double-dutch": {
+  "inputs": [
+   {
+    "L": [
+     [
+      1,
+      0
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/double-dutch/"
+   }
+  ]
+ },
+ "trippy-switch": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/trippy-switch/"
+   }
+  ]
+ },
+ "reversed-power-flip": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/reversed-power-flip/"
+   }
+  ]
+ },
+ "half-mavvy": {
+  "inputs": [
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "originator": "Shauny D",
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/half-mavvy/"
+   }
+  ]
+ },
+ "roll-tap": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/roll-tap/"
+   }
+  ]
+ },
+ "stall-360-rewind": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/stall-360-rewind/"
+   }
+  ]
+ },
+ "stall-matty-rewind": {
+  "inputs": [
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/stall-matty-rewind/"
+   }
+  ]
+ },
+ "matty-roll": {
+  "inputs": [
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/matty-roll/"
+   }
+  ]
+ },
+ "mavvelmann": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/mavvelmann/"
+   }
+  ]
+ },
+ "beginner-switch": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      1,
+      0
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/beginner-switch/"
+   }
+  ]
+ },
+ "power-swap": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/power-swap/"
+   }
+  ]
+ },
+ "eject-roll": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/eject-roll/"
+   }
+  ]
+ },
+ "true-barani": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      -0.7,
+      0.7
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0.7,
+      -0.7
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/true-barani/"
+   }
+  ]
+ },
+ "reverse-knife-edge": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -0.7,
+      -0.7
+     ]
+    ],
+    "R": [
+     [
+      0.7,
+      0.7
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/reverse-knife-edge/"
+   },
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=BkdoJlJRVsw"
+   }
+  ]
+ },
+ "dive": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Rotor Riot",
+    "url": "https://rotorriot.com/blogs/tutorials-guides/fpv-freestyle-tricktionary"
+   }
+  ]
+ },
+ "stall": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Rotor Riot",
+    "url": "https://rotorriot.com/blogs/tutorials-guides/fpv-freestyle-tricktionary"
+   },
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=_6sEh0KIC_o"
+   }
+  ]
+ },
+ "land": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=FoThnMhbew0"
+   }
+  ]
+ },
+ "coin-drop": {
+  "inputs": [
+   {
+    "L": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=fT2SgTkLFGI"
+   }
+  ]
+ },
+ "boomerang": {
+  "inputs": [
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=cEqJj62f8iY"
+   }
+  ]
+ },
+ "pendulum": {
+  "inputs": [
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=l7F1a68G9r8"
+   }
+  ]
+ },
+ "slingshot": {
+  "inputs": [
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": true,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=Z5cfPV4aPvM"
+   }
+  ]
+ },
+ "blind-loop": {
+  "inputs": [
+   {
+    "L": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/blind-loop/"
+   }
+  ]
+ },
+ "inverted-yaw-tracking": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0.7,
+      -0.7
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/inverted-yaw-tracking/"
+   },
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=UpNEeSRyPbQ"
+   }
+  ]
+ },
+ "stellar-eject-roll": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/stellar-eject-roll/"
+   }
+  ]
+ },
+ "backward-flying": {
+  "inputs": [
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=esueDHARopM"
+   }
+  ]
+ },
+ "backwards-dive": {
+  "inputs": [
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Rotor Riot",
+    "url": "https://rotorriot.com/blogs/tutorials-guides/fpv-freestyle-tricktionary"
+   }
+  ]
+ },
+ "sideways-powerloop": {
+  "inputs": [
+   {
+    "L": [
+     [
+      1,
+      0
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=LcYJFd3gMEQ"
+   }
+  ]
+ },
+ "wall-bonk": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Rotor Riot",
+    "url": "https://rotorriot.com/blogs/tutorials-guides/fpv-freestyle-tricktionary"
+   }
+  ]
+ },
+ "juicy-eject": {
+  "inputs": [
+   {
+    "L": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=qvVVhV-37-A"
+   }
+  ]
+ },
+ "split-s-rewind": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      0.7,
+      0.7
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=1K6DLayjxJ8"
+   }
+  ]
+ },
+ "front-swing": {
+  "inputs": [
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=7k_hbcJxwIg"
+   }
+  ]
+ },
+ "inverted-uh-uh": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/inverted-uh-uh/"
+   }
+  ]
+ },
+ "power-switch": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/power-switch/"
+   }
+  ]
+ },
+ "ninja-star": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0.7,
+      -0.7
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/ninja-star/"
+   }
+  ]
+ },
+ "barrel-roll": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Rotor Riot",
+    "url": "https://rotorriot.com/blogs/tutorials-guides/fpv-freestyle-tricktionary"
+   }
+  ]
+ },
+ "sideways-rewind": {
+  "inputs": [
+   {
+    "L": null,
+    "R": [
+     [
+      -0.5,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      -0.7,
+      -0.7
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0.2,
+      -0.98
+     ]
+    ],
+    "R": [
+     [
+      0.2,
+      0.98
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=JRv6e2CGwMA"
+   }
+  ]
+ },
+ "alley-oop": {
+  "inputs": [
+   {
+    "L": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      0.7,
+      -0.7
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0.7,
+      0.7
+     ]
+    ],
+    "R": [
+     [
+      0.7,
+      -0.7
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=0GACKQ9ED4Y"
+   }
+  ]
+ },
+ "laser-flip": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0.7,
+      -0.7
+     ]
+    ],
+    "R": [
+     [
+      0.7,
+      0.7
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0.7,
+      -0.7
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=CyS0C_DJO9o"
+   }
+  ]
+ },
+ "slides-grinds": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Rotor Riot",
+    "url": "https://rotorriot.com/blogs/tutorials-guides/fpv-freestyle-tricktionary"
+   }
+  ]
+ },
+ "power-drill": {
+  "inputs": [
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=ToWkJ2l36ag"
+   }
+  ]
+ },
+ "inverted-360-powerloop": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -0.7,
+      -0.7
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/inverted-360-powerloop/"
+   }
+  ]
+ },
+ "double-rolling-trippy-spin": {
+  "inputs": [
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/double-rolling-trippy-spin/"
+   }
+  ]
+ },
+ "forani": {
+  "inputs": [
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -0.7,
+      -0.7
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/forani/"
+   }
+  ]
+ },
+ "inverted-lookback": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=zsOiLwK0NCQ"
+   }
+  ]
+ },
+ "tracking-front-flip": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -0.7,
+      -0.7
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=th4Y8HVnG4Q"
+   }
+  ]
+ },
+ "split-s-to-stall-track": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      0.7,
+      0.7
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=N1YRL3P7wVA"
+   }
+  ]
+ },
+ "sbang-tornado": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -0.7,
+      -0.7
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      0.2
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=BQauW42gMfE"
+   }
+  ]
+ },
+ "flat-bounce-rewind": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=dFG_icTXtw8"
+   }
+  ]
+ },
+ "immelmatt": {
+  "inputs": [
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/immelmatt/"
+   }
+  ]
+ },
+ "mavani": {
+  "inputs": [
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0.7,
+      -0.7
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/mavani/"
+   }
+  ]
+ },
+ "split-stall-matty-rewind": {
+  "inputs": [
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      -0.5
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/split-stall-matty-rewind/"
+   }
+  ]
+ },
+ "loop": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Rotor Riot",
+    "url": "https://rotorriot.com/blogs/tutorials-guides/fpv-freestyle-tricktionary"
+   }
+  ]
+ },
+ "lookback-and-loop": {
+  "inputs": [
+   {
+    "L": [
+     [
+      1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=0QAK68uip8E"
+   }
+  ]
+ },
+ "throwback": {
+  "inputs": [
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Rotor Riot",
+    "url": "https://rotorriot.com/blogs/tutorials-guides/fpv-freestyle-tricktionary"
+   }
+  ]
+ },
+ "inverted-yaw-spin-rewind": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=T7uEolLo_9c"
+   }
+  ]
+ },
+ "juicy-cartwheel": {
+  "inputs": [
+   {
+    "L": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0.7,
+      0.7
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=uvIvAzPRXiU"
+   }
+  ]
+ },
+ "loop-to-matty": {
+  "inputs": [
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -0.2
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/loop-to-matty/"
+   }
+  ]
+ },
+ "mavik-s-loop": {
+  "inputs": [
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -0.7,
+      -0.7
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/maviks-loop/"
+   }
+  ]
+ },
+ "somermatty": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=ctaD7f9kYmE"
+   }
+  ]
+ },
+ "stall-540-half-matty-rewind": {
+  "inputs": [
+   {
+    "L": [
+     [
+      -0.7,
+      -0.7
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/stall-540-half-matty-rewind/"
+   }
+  ]
+ },
+ "barani": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      0.2
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/barani/"
+   },
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=KiNsSFad3Rg"
+   }
+  ]
+ },
+ "power-switch-tap": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "originator": "Shauny D (aka Jackie Chan)",
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/power-switch-tap/"
+   }
+  ]
+ },
+ "donkey-loop": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -0.7,
+      -0.7
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -0.5
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/donkey-loop/"
+   },
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=NjjoxF9TO6c"
+   }
+  ]
+ },
+ "rubik-s-cube": {
+  "inputs": [
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      1,
+      0
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "originator": "Fireblast FPV (video example)",
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/rubiks-cube/"
+   },
+   {
+    "label": "Rotor Riot",
+    "url": "https://rotorriot.com/blogs/tutorials-guides/fpv-freestyle-tricktionary"
+   },
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=y5ZnxXhxNiM"
+   }
+  ]
+ },
+ "rufio": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -0.7,
+      -0.7
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      0.2
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0.7,
+      -0.7
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=-JyReQwHxrQ"
+   }
+  ]
+ },
+ "flip-rewind-to-inverted-yaw-spin": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=rsA_llKYtSE"
+   }
+  ]
+ },
+ "side-lookback-plus-inverted-yaw-spin": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      -0.7,
+      -0.7
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0.5,
+      -0.5
+     ]
+    ],
+    "R": [
+     [
+      0.5,
+      0.5
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -0.5,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -0.5,
+      -1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=KEP9Ne2TuHM"
+   }
+  ]
+ },
+ "outward-side-lock-rewind": {
+  "inputs": [
+   {
+    "L": null,
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0.34,
+      -0.94
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -0.34,
+      -0.94
+     ]
+    ],
+    "R": [
+     [
+      -0.94,
+      -0.34
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=VzwQobYtErk"
+   }
+  ]
+ },
+ "juicy-tracking-lookback": {
+  "inputs": [
+   {
+    "L": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      -0.94,
+      -0.34
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      -0.94,
+      0.34
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=Ugy7drDWFbs"
+   }
+  ]
+ },
+ "540-delayed-front-flip": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ],
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -0.7,
+      -0.7
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=OGJq7kl8WVs"
+   }
+  ]
+ },
+ "cubik-s-rube": {
+  "inputs": [
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      1,
+      0
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/cubiks-rube/"
+   }
+  ]
+ },
+ "flipani": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      0.2
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/flipani/"
+   }
+  ]
+ },
+ "rollani": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      0.2
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Pro Whooper",
+    "url": "https://prowhooper.com/rollani/"
+   }
+  ]
+ },
+ "jackie-chan": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "originator": "Shauny D",
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=-1CdCEsg3kU"
+   }
+  ]
+ },
+ "rubik-s-cube-pendulum": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -0.7,
+      -0.7
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=4_-lTMsyUm4"
+   }
+  ]
+ },
+ "lookback-plus-roll-plus-inverted-yaw-spin": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -0.7,
+      -0.7
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -0.7,
+      -0.7
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=Hvy04PiWypw"
+   }
+  ]
+ },
+ "double-side-roll-plus-180-inverted-yaw-spin": {
+  "inputs": [
+   {
+    "L": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -0.7,
+      -0.7
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=Nc8VvKV7BSM"
+   }
+  ]
+ },
+ "rapid-split-s-plus-inverted-yaw-spin-combo": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0.7,
+      -0.7
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=S7v9Pla4Lr8"
+   }
+  ]
+ },
+ "inverted-yaw-track-rewind": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0.7,
+      -0.7
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -0.7,
+      -0.7
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=er4Pm-nJK0E"
+   }
+  ]
+ },
+ "540-flip-plus-roll-plus-inverted-yaw-spin": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -0.2,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -0.7,
+      -0.7
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=l3Y8brXYYQw"
+   }
+  ]
+ },
+ "advanced-combo-3": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      -0.5,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0.5,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      0.5,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -0.5,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      0.5,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -0.5,
+      -1
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=mjXxvsTXvBg"
+   }
+  ]
+ },
+ "eject-lookback-roll-plus-inverted-yaw-spin": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -0.5,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -0.7,
+      -0.7
+     ]
+    ],
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=XcGlJZFV7_U"
+   }
+  ]
+ },
+ "juicy-flick-rewind": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -0.7,
+      -0.7
+     ]
+    ],
+    "R": [
+     [
+      0.7,
+      0.7
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -0.7,
+      -0.7
+     ]
+    ],
+    "R": [
+     [
+      -0.98,
+      -0.2
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=bwDXG8olfcM"
+   }
+  ]
+ },
+ "rapid-look-back-plus-slow-double-roll": {
+  "inputs": [
+   {
+    "L": null,
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": null,
+    "R": null,
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=XtfDPieZJTI"
+   }
+  ]
+ },
+ "look-back-plus-double-roll": {
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -0.7,
+      -0.7
+     ]
+    ],
+    "R": [
+     [
+      0.7,
+      0.7
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=6NLNzgcgsns"
+   }
+  ]
+ },
+ "sbang-ultimate-combo": {
+  "inputs": [
+   {
+    "L": [
+     [
+      -0.5,
+      0
+     ],
+     [
+      0.5,
+      0
+     ]
+    ],
+    "R": [
+     [
+      -0.5,
+      0
+     ],
+     [
+      0.5,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0.5,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      1,
+      -0.5
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -0.5,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      -0.5,
+      0.5
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      -1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": [
+     [
+      0,
+      1
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   }
+  ],
+  "links": [
+   {
+    "label": "Mazta FPV tutorial",
+    "url": "https://www.youtube.com/watch?v=CK4AQszHHfI"
+   }
+  ]
+ }
+}

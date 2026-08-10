@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+<title>The Tricktionary</title>
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=5">
+<meta name="description" content="A visual field guide to FPV freestyle tricks: 143 tricks with flight paths, control inputs, how-to, and a learning progression you can tick off. Works offline.">
+<meta name="theme-color" content="#131211" media="(prefers-color-scheme: dark)">
+<meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="apple-mobile-web-app-title" content="Tricktionary">
+<link rel="stylesheet" href="css/style.css?v=5">
+<script>
+  /* Set the theme before first paint so a dark-mode load never flashes white.
+     Dark is the default; light is only used if it was explicitly chosen. */
+  (function () {
+    var t = null;
+    try { t = localStorage.getItem('tt-theme'); } catch (e) {}
+    document.documentElement.className = (t === 'light') ? 'light' : 'dark';
+  })();
+</script>
+</head>
+<body>
+<div class="app">
+
+<nav class="tabs">
+  <div class="brand">
+    <span class="brand-logo" aria-hidden="true">
+      <!-- Same quad as favicon.svg: an X frame under a looping flight path.
+           Keep the two in step. -->
+      <svg viewBox="0 0 40 40">
+        <path d="M9 31 L31 9 M9 9 L31 31" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+        <circle cx="9" cy="9" r="4.6" fill="none" stroke="currentColor" stroke-width="2.4"/>
+        <circle cx="31" cy="9" r="4.6" fill="none" stroke="currentColor" stroke-width="2.4"/>
+        <circle cx="9" cy="31" r="4.6" fill="none" stroke="currentColor" stroke-width="2.4"/>
+        <circle cx="31" cy="31" r="4.6" fill="none" stroke="currentColor" stroke-width="2.4"/>
+      </svg>
+    </span>
+    <span class="brand-name">The Tricktionary</span>
+  </div>
+
+  <div class="tab-list">
+    <button class="active" data-tab="tricks" title="All 143 tricks, filtered and searchable">
+      <svg viewBox="0 0 24 24"><path d="M4 6h16M4 12h16M4 18h10"/><circle cx="19" cy="18" r="2.4"/></svg>
+      <span class="tab-label">Tricks</span></button>
+    <button data-tab="progression" title="A suggested order to learn them, ticked off as you land them">
+      <svg viewBox="0 0 24 24"><path d="M4 7l2.5 2.5L11 5"/><path d="M4 17l2.5 2.5L11 15"/><path d="M14 7h6M14 17h6"/></svg>
+      <span class="tab-label">Progression <span id="progCount" class="pill"></span></span></button>
+    <button data-tab="basics" title="How to read a trick page, the sticks, and the difficulty scale">
+      <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 11v5"/><path d="M12 7.6v.8"/></svg>
+      <span class="tab-label">Basics</span></button>
+    <button data-tab="glossary" title="The words pilots use">
+      <svg viewBox="0 0 24 24"><path d="M4 5h7a2 2 0 0 1 2 2v12a2 2 0 0 0-2-2H4z"/><path d="M20 5h-7a2 2 0 0 0-2 2v12a2 2 0 0 1 2-2h7z"/></svg>
+      <span class="tab-label">Glossary</span></button>
+    <button data-tab="safety" title="Rules, airspace, and where to fly">
+      <svg viewBox="0 0 24 24"><path d="M12 3l7 3v5.5c0 4.2-2.9 7.9-7 9.5-4.1-1.6-7-5.3-7-9.5V6z"/><path d="M12 9v4"/><path d="M12 15.6v.4"/></svg>
+      <span class="tab-label">Safety</span></button>
+  </div>
+
+  <!-- Settings sits in its own ruled-off block at the foot of the rail. On a
+       phone the block is display:contents, so the button falls back into the
+       bottom bar, where it becomes the More tab. -->
+  <div class="tabs-foot">
+    <button data-tab="settings" title="Settings">
+      <svg class="ic-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+      <svg class="ic-grid" viewBox="0 0 24 24"><path d="M4 4h7v7H4z"/><path d="M13 4h7v7h-7z"/><path d="M4 13h7v7H4z"/><path d="M13 13h7v7h-7z"/></svg>
+      <span class="tab-label"><span class="lbl-wide">Settings</span><span class="lbl-narrow">More</span></span></button>
+  </div>
+</nav>
+
+<!-- The phone's stand-in for the foot of the rail, which the five-slot bottom
+     bar has no room for. Opened by the More tab. -->
+<div class="more-sheet" id="moreSheet">
+  <div class="more-label">More</div>
+  <div class="more-grid">
+    <button class="more-tile" type="button" data-more="safety">
+      <span class="tile-mark"><svg viewBox="0 0 24 24"><path d="M12 3l7 3v5.5c0 4.2-2.9 7.9-7 9.5-4.1-1.6-7-5.3-7-9.5V6z"/><path d="M12 9v4"/><path d="M12 15.6v.4"/></svg></span><span>Safety</span></button>
+    <button class="more-tile" type="button" data-more="settings">
+      <span class="tile-mark"><svg class="ic-gear" viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 1 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 1 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 1 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 1 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg></span><span>Settings</span></button>
+  </div>
+</div>
+
+<main class="content">
+<h1><span class="brand-logo" aria-hidden="true">
+  <svg viewBox="0 0 40 40">
+    <path d="M9 31 L31 9 M9 9 L31 31" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
+    <circle cx="9" cy="9" r="4.6" fill="none" stroke="currentColor" stroke-width="2.4"/>
+    <circle cx="31" cy="9" r="4.6" fill="none" stroke="currentColor" stroke-width="2.4"/>
+    <circle cx="9" cy="31" r="4.6" fill="none" stroke="currentColor" stroke-width="2.4"/>
+    <circle cx="31" cy="31" r="4.6" fill="none" stroke="currentColor" stroke-width="2.4"/>
+  </svg></span>The Tricktionary</h1>
+<div class="sub">A visual field guide to FPV freestyle tricks. Your progress is saved in this browser.</div>
+
+<!-- ── Tricks ─────────────────────────────────────────────────────────── -->
+<div class="tabpage maxw active" id="tab-tricks">
+  <div id="trickList">
+    <div class="page-title">
+      <h2>Tricks</h2>
+      <div class="page-sub">143 tricks compiled from the FPV community, one entry each</div>
+    </div>
+
+    <section class="panel filters">
+      <input type="search" id="trickSearch" placeholder="Search names, how-to, prerequisites, mistakes... (e.g. powerloop, rewind, inverted)" autocomplete="off">
+      <div class="filter-row">
+        <div class="filter-label">Difficulty</div>
+        <div class="chips" id="diffChips"></div>
+      </div>
+      <div class="filter-row">
+        <div class="filter-label">Category</div>
+        <div class="chips" id="catChips"></div>
+      </div>
+      <div class="filter-row">
+        <div class="filter-label">Progress</div>
+        <div class="chips" id="progChips"></div>
+      </div>
+      <div class="filter-foot">
+        <span id="resultCount"></span>
+        <span class="foot-actions">
+          <button class="mini" id="btnRandomTrick" title="Jump to a random trick from the current filter">Surprise me</button>
+          <button class="mini" id="btnClearFilters" title="Clear the search and every filter">Reset</button>
+        </span>
+      </div>
+    </section>
+
+    <div id="trickCards" class="trick-grid"></div>
+  </div>
+
+  <div id="trickDetail" hidden></div>
+</div>
+
+<!-- ── Progression ────────────────────────────────────────────────────── -->
+<div class="tabpage maxw" id="tab-progression">
+  <div class="page-title">
+    <h2>Learning progression</h2>
+    <div class="page-sub">A suggested order to learn tricks, grouped by difficulty and listed in order within each tier. Variations sit beneath their base trick. Tick each box as you land it.</div>
+  </div>
+  <section class="panel" id="progSummary"></section>
+  <div id="progTiers"></div>
+</div>
+
+<!-- ── Basics ─────────────────────────────────────────────────────────── -->
+<div class="tabpage maxw" id="tab-basics">
+  <div class="page-title">
+    <h2>The basics</h2>
+    <div class="page-sub">How to read a trick, how the sticks are drawn, and what the difficulty tiers mean</div>
+  </div>
+
+  <section class="panel">
+    <h3 class="mod-h">How to read a trick</h3>
+    <p class="lede">Every trick gets one entry, and the anatomy is the same for all of them.</p>
+    <div class="def-grid">
+      <div><b>The header</b><p>The trick's name, a difficulty chip, and its motion-family category.</p></div>
+      <div><b>How to</b><p>A plain-language walkthrough of the maneuver, drawn from source tutorials and credited at the foot of the entry.</p></div>
+      <div><b>Mastery levels</b><p>Three star levels for each trick: one star for landing it at all, two for clean form, three for perfect form. Use them to gauge how solid a trick really is, not just whether you have done it once.</p></div>
+      <div><b>Step by step</b><p>Each step describes the throttle, yaw, pitch, and roll for that moment of the maneuver.</p></div>
+      <div><b>The notes</b><p>Prerequisites and where to practice, common mistakes, variations, and related tricks: everything you need to decide if you're ready and what to try next.</p></div>
+      <div><b>Sources</b><p>Every entry links its sources. Nothing here is invented; it is compiled and credited.</p></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h3 class="mod-h">Reading the sticks <small>Mode 2</small></h3>
+    <p class="lede">Control inputs are described as a pair of sticks. Learn the four axes here once.</p>
+    <div class="twocol">
+      <div class="stick-def">
+        <div class="stick-h">Left stick</div>
+        <p><b>Up / down</b> &mdash; Throttle. Up adds power and lift; down cuts it.</p>
+        <p><b>Left / right</b> &mdash; Yaw. Rotates the drone left or right in place.</p>
+      </div>
+      <div class="stick-def">
+        <div class="stick-h">Right stick</div>
+        <p><b>Up / down</b> &mdash; Pitch. Up drops the nose to fly forward; down raises it.</p>
+        <p><b>Left / right</b> &mdash; Roll. Tips the drone onto its left or right side.</p>
+      </div>
+    </div>
+    <div class="stick-examples" id="stickExamples"></div>
+  </section>
+
+  <section class="panel">
+    <h3 class="mod-h">The difficulty scale</h3>
+    <div id="diffScale"></div>
+  </section>
+</div>
+
+<!-- ── Glossary ───────────────────────────────────────────────────────── -->
+<div class="tabpage maxw" id="tab-glossary">
+  <div class="page-title">
+    <h2>Glossary</h2>
+    <div class="page-sub">The words pilots use, and what they mean</div>
+  </div>
+  <section class="panel">
+    <input type="search" id="glossarySearch" placeholder="Filter terms... (e.g. acro, bando, prop wash)" autocomplete="off">
+  </section>
+  <div id="glossaryList" class="def-grid cards"></div>
+</div>
+
+<!-- ── Safety ─────────────────────────────────────────────────────────── -->
+<div class="tabpage maxw" id="tab-safety">
+  <div class="page-title">
+    <h2>Safety &amp; where to fly</h2>
+    <div class="page-sub">A starting orientation, not legal advice</div>
+  </div>
+  <section class="panel">
+    <div class="def-grid">
+      <div><b>Know the rules</b><p>In the U.S., recreational flight follows the FAA's rules for recreational flyers; flying for any non-recreational purpose requires a Part 107 certificate. Pass the free TRUST test, register your drone if it's over 250&nbsp;g, and check for a Remote ID requirement.</p></div>
+      <div><b>Altitude &amp; airspace</b><p>Stay at or below 400&nbsp;ft AGL and clear of controlled airspace unless you have authorization (LAANC). Use a current airspace map before you fly somewhere new.</p></div>
+      <div><b>Line of sight &amp; spotter</b><p>Keep the aircraft in visual line of sight, with a visual observer if you're in goggles. Many parks and events require this.</p></div>
+      <div><b>Where to fly</b><p>Pick open spaces away from people, roads, and airports: fields, sanctioned FPV spots, and clubs (AMA fields). Some state parks require a permit or ban drones outright, so check before you go, and get landowner permission on private property.</p></div>
+      <div><b>Fly within your skill</b><p>Give yourself altitude to recover, drop your rates when learning, and practice new tricks in a simulator first. Every sim crash is a free lesson.</p></div>
+    </div>
+  </section>
+  <div class="banner">
+    Rules change and vary by location. Always confirm the current regulations for where you fly.
+  </div>
+  <div class="banner soft">
+    <div class="banner-label">On crashing</div>
+    &ldquo;If you're not crashing, you're not flying.&rdquo;
+  </div>
+</div>
+
+<!-- ── Settings ───────────────────────────────────────────────────────── -->
+<div class="tabpage maxw" id="tab-settings">
+  <div class="page-title">
+    <h2>Settings</h2>
+    <div class="page-sub">Appearance, your saved progress, and where the content comes from</div>
+  </div>
+
+  <section class="panel">
+    <h3 class="mod-h">Appearance</h3>
+    <div class="field">
+      <label>Theme</label>
+      <div class="row" style="max-width:320px">
+        <button id="btnThemeDark" style="flex:1">Dark</button>
+        <button id="btnThemeLight" style="flex:1">Light</button>
+      </div>
+      <div class="hint">Dark is the default. Your choice is remembered in this browser.</div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <h3 class="mod-h">Import &amp; export</h3>
+    <div class="hint" style="margin-bottom:.6rem">
+      Your mastery stars, filters, and theme live in this browser's storage, which clearing
+      site data will wipe. Export writes them all to one file you can keep or carry to
+      another device. Importing <b>merges</b> into what is here already, keeping the higher
+      star level for any trick in both.
+    </div>
+    <div class="row wrap" style="max-width:520px">
+      <button id="btnExport" style="flex:1">Export progress</button>
+      <button id="btnImport" style="flex:1">Import from file</button>
+      <input type="file" id="importFile" accept=".json,application/json" hidden>
+    </div>
+    <div id="ioStatus" class="hint" style="margin-top:.5rem"></div>
+    <div class="row" style="margin-top:.9rem;max-width:520px">
+      <button id="btnResetProgress" class="danger" style="flex:1">Reset all progress</button>
+    </div>
+  </section>
+
+  <section class="panel" id="attribution">
+    <h3 class="mod-h">Sources &amp; attribution</h3>
+    <p class="hint">
+      Every trick in this guide is compiled from the FPV community's own tutorials and
+      trick lists, credited per entry. This site is not affiliated with, endorsed by, or
+      sponsored by any of the sources below.
+    </p>
+    <div id="sourceList"></div>
+    <p class="hint" style="margin-top:.9rem">
+      Content is adapted from <b>The Tricktionary</b> v1.0, a visual field guide to FPV
+      freestyle tricks compiled from the sources above. The whole book ships with this
+      site, and every entry links back to the page it came from:
+      <a href="assets/the-tricktionary-v1.pdf" target="_blank" rel="noopener">read or download the PDF</a>
+      (158 pages, 1.7&nbsp;MB).
+    </p>
+  </section>
+
+  <section class="panel">
+    <h3 class="mod-h">About</h3>
+    <p style="margin:.2rem 0">Created by <a href="https://github.com/dangeratio" target="_blank" rel="noopener">dangeratio</a>.</p>
+    <p style="margin:.2rem 0">Report issues at <a href="https://github.com/thetricktionary/thetricktionary.github.io/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+    <p class="hint" style="margin:.6rem 0 0">
+      The code behind this site is open source under the
+      <a href="https://github.com/thetricktionary/thetricktionary.github.io/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a>.
+      The trick content is not the project's to license: it is compiled from the
+      sources above, which set their own terms.
+    </p>
+  </section>
+</div>
+
+<div class="footer-note">
+  Created by <a href="https://github.com/dangeratio" target="_blank" rel="noopener">dangeratio</a>
+  <span class="sep">|</span> report issues at <a href="https://github.com/thetricktionary/thetricktionary.github.io/issues" target="_blank" rel="noopener">github</a>
+  <span class="sep">|</span> <a href="#attribution" id="linkAttribution">sources &amp; attribution</a>
+  <span class="sep">|</span> code under <a href="https://github.com/thetricktionary/thetricktionary.github.io/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a>
+</div>
+</main>
+</div><!-- /app -->
+
+<div id="toast"></div>
+
+<script src="js/data.js?v=5"></script>
+<script src="js/app.js?v=5"></script>
+</body>
+</html>
