@@ -39,6 +39,26 @@ means at least one star. Export writes `{slug: 0-3}` to a JSON file; import
 merges it in, keeping whichever side has the higher level, so restoring an old
 backup can never take progress away.
 
+### Progress survives deploys
+
+localStorage is scoped to the origin, not to any file or `?v=` query, and the
+site has no service worker, so shipping new code does not touch what is stored.
+A user keeps their stars across every update. Three guards back that up:
+
+- `tools/build-data.py` **refuses to build** if a trick's slug disappears
+  between builds without a `SLUG_ALIASES` entry, since stars are keyed by slug
+  and a silent rename would orphan them. Aliases are applied on load and are
+  permanent.
+- Progress that cannot be parsed is copied to `tt-progress-rescued` before
+  anything else is written, so a bad read can never destroy a good backup.
+- A failed write is detected by reading back, and reported in Settings, rather
+  than the app looking like it saved when it did not.
+
+What is still outside the site's control: moving to a custom domain changes the
+origin and storage does not follow, Safari drops script-written storage after
+about a week without a visit, and clearing site data wipes it. Export is the
+answer to all three.
+
 ## Run it
 
 No build step. Open `index.html`, or serve the folder:

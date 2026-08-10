@@ -183,6 +183,12 @@ h1, .sub { display: none; }
 .mod-h small { font-weight: 400; color: var(--muted); font-size: .75rem; margin-left: .4rem; }
 .lede { color: var(--muted); font-size: .9rem; margin: 0 0 .8rem; max-width: 75ch; }
 .hint { color: var(--muted); font-size: .85rem; }
+.hint b.warn { color: var(--bad); }
+.hint code {
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace; font-size: .92em;
+  background: var(--card); border: 1px solid var(--line);
+  border-radius: 4px; padding: 0 .25em;
+}
 .field { margin-bottom: .9rem; }
 .field:last-child { margin-bottom: 0; }
 .field label { display: block; font-weight: 600; font-size: .85rem; margin-bottom: .3rem; }
