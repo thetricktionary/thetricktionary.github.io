@@ -1,7 +1,11 @@
 __pycache__/
 *.pyc
-Trash/
 .DS_Store
+
+# Deleted files are moved here rather than removed, so the folder is a
+# working-copy staging area and never part of the published site. Matches
+# at any depth, not just the repo root.
+Trash/
 
 # Agent instructions: local to the working copy, not part of the published site
 CLAUDE.md
