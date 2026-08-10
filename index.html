@@ -4,14 +4,20 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <title>The Tricktionary</title>
-<link rel="icon" type="image/svg+xml" href="favicon.svg?v=5">
+<!-- The quad mark, same as .brand-logo below. The SVG is the real icon; the
+     .ico and the touch icon are fallbacks, because Safari ignores SVG favicons
+     and a bare /favicon.ico request would otherwise 404. All are generated
+     from one geometry by tools/make-icons.py. -->
+<link rel="icon" href="favicon.ico?v=7" sizes="32x32">
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=7">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=7">
 <meta name="description" content="A visual field guide to FPV freestyle tricks: 143 tricks with flight paths, control inputs, how-to, and a learning progression you can tick off. Works offline.">
 <meta name="theme-color" content="#131211" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Tricktionary">
-<link rel="stylesheet" href="css/style.css?v=5">
+<link rel="stylesheet" href="css/style.css?v=7">
 <script>
   /* Set the theme before first paint so a dark-mode load never flashes white.
      Dark is the default; light is only used if it was explicitly chosen. */
@@ -28,8 +34,10 @@
 <nav class="tabs">
   <div class="brand">
     <span class="brand-logo" aria-hidden="true">
-      <!-- Same quad as favicon.svg: an X frame under a looping flight path.
-           Keep the two in step. -->
+      <!-- Same quad as favicon.svg: an X frame seen from above, four motors.
+           Lighter strokes than the icon, which is drawn heavy to survive 16px.
+           Keep the two in step; tools/make-icons.py redraws the same geometry
+           for the raster fallbacks. -->
       <svg viewBox="0 0 40 40">
         <path d="M9 31 L31 9 M9 9 L31 31" stroke="currentColor" stroke-width="3" stroke-linecap="round" fill="none"/>
         <circle cx="9" cy="9" r="4.6" fill="none" stroke="currentColor" stroke-width="2.4"/>
@@ -282,8 +290,6 @@
     <p class="hint" style="margin:.6rem 0 0">
       The code behind this site is open source under the
       <a href="https://github.com/thetricktionary/thetricktionary.github.io/blob/main/LICENSE" target="_blank" rel="noopener">MIT License</a>.
-      The trick content is not the project's to license: it is compiled from the
-      sources above, which set their own terms.
     </p>
   </section>
 </div>
@@ -292,14 +298,13 @@
   Created by <a href="https://github.com/dangeratio" target="_blank" rel="noopener">dangeratio</a>
   <span class="sep">|</span> report issues at <a href="https://github.com/thetricktionary/thetricktionary.github.io/issues" target="_blank" rel="noopener">github</a>
   <span class="sep">|</span> <a href="#attribution" id="linkAttribution">sources &amp; attribution</a>
-  <span class="sep">|</span> code under <a href="https://github.com/thetricktionary/thetricktionary.github.io/blob/main/LICENSE" target="_blank" rel="noopener">MIT</a>
 </div>
 </main>
 </div><!-- /app -->
 
 <div id="toast"></div>
 
-<script src="js/data.js?v=5"></script>
-<script src="js/app.js?v=5"></script>
+<script src="js/data.js?v=7"></script>
+<script src="js/app.js?v=7"></script>
 </body>
 </html>
