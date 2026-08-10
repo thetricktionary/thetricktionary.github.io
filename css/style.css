@@ -250,7 +250,72 @@ input[type=checkbox] { accent-color: var(--accent); }
   color: var(--muted); font-size: .84rem; line-height: 1.45;
   display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
 }
-.empty { color: var(--muted); padding: 2rem 0; text-align: center; }
+.empty { color: var(--muted); padding: 2rem 0; text-align: center; grid-column: 1 / -1; }
+
+/* ── "missing a trick?" tile ───────────────────────────────────────────
+   A trick card with nothing in it yet. Same footprint and the same internal
+   rhythm as a real entry, but every slot is a skeleton block, so it reads as
+   a page of the book waiting to be written rather than as a button bolted on
+   the end. It is the last card always, filtered or not. */
+.submit-tile {
+  position: relative; text-decoration: none;
+  border-style: dashed; background: transparent;
+}
+.submit-tile:hover { border-style: solid; background: var(--row-hover); }
+
+.sk { display: block; border-radius: 5px; background: var(--line-soft); position: relative; overflow: hidden; }
+/* One shimmer for the whole tile: each block samples the same sweep, so the
+   highlight crosses the card rather than restarting in every box. */
+.sk::after {
+  content: ""; position: absolute; inset: 0;
+  background: linear-gradient(90deg, transparent, var(--line) 45%, transparent);
+  transform: translateX(-100%);
+  animation: sk-sweep 2.4s ease-in-out infinite;
+}
+.sk-name::after { animation-delay: .06s; }
+.sk-chip::after { animation-delay: .12s; }
+.sk-line::after { animation-delay: .18s; }
+@keyframes sk-sweep { to { transform: translateX(100%); } }
+
+.sk-thumb {
+  aspect-ratio: 229.92 / 184; margin: -.1rem 0 .1rem; border-radius: 7px;
+  display: flex; align-items: center; justify-content: center;
+}
+.sk-plus {
+  position: relative; z-index: 1;
+  font-size: 1.9rem; font-weight: 300; line-height: 1;
+  color: var(--muted); opacity: .5;
+}
+.sk-name { width: 62%; height: .95rem; }
+.submit-tile .tc-meta { width: 100%; }
+.sk-chip { width: 74px; height: 1.1rem; border-radius: 5px; }
+.sk-chip.short { width: 52px; }
+.sk-lines { display: flex; flex-direction: column; gap: .34rem; width: 100%; }
+.sk-line { height: .52rem; }
+.sk-line.short { width: 55%; }
+
+/* The one thing on the tile that is not a placeholder */
+.submit-cta {
+  position: absolute; inset: auto 0 0; z-index: 2;
+  display: flex; flex-direction: column; align-items: center; gap: .1rem;
+  padding: .9rem .6rem .85rem;
+  background: linear-gradient(to top, var(--panel) 62%, transparent);
+  border-radius: 0 0 9px 9px; text-align: center;
+}
+.submit-cta b { color: var(--accent); font-size: .95rem; }
+.submit-where {
+  display: inline-flex; align-items: center; gap: .32rem;
+  color: var(--muted); font-size: .8rem;
+}
+.submit-where .gh { width: 13px; height: 13px; fill: currentColor; flex-shrink: 0; }
+.submit-where .ext {
+  width: 10px; height: 10px; flex-shrink: 0; fill: none; stroke: currentColor;
+  stroke-width: 2.2; stroke-linecap: round; stroke-linejoin: round; opacity: .7;
+}
+.submit-tile:hover .submit-where { color: var(--accent); }
+.submit-tile:hover .submit-cta { background: linear-gradient(to top, var(--row-hover) 62%, transparent); }
+
+@media (prefers-reduced-motion: reduce) { .sk::after { display: none; } }
 
 /* Difficulty chip. The book fills this chip solid in the tier's own colour
    (TIER_COLORS in its renderer), green through red, so the site does the same
