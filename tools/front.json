@@ -1,0 +1,777 @@
+{
+ "glossary": [
+  {
+   "term": "5-inch",
+   "def": "A common freestyle quad class with 5-inch props; more power and range than a whoop."
+  },
+  {
+   "term": "Acro / Rate mode",
+   "def": "Manual flight mode with no self-leveling; the sticks command rotation rate. Required for nearly every freestyle trick."
+  },
+  {
+   "term": "Arm",
+   "def": "Enabling the motors so the quad will spin up. You arm before takeoff (usually on a switch) and disarm to cut power."
+  },
+  {
+   "term": "AUX / switch",
+   "def": "An auxiliary channel on the radio, used to arm, change modes, or trigger features mid-flight."
+  },
+  {
+   "term": "Bando",
+   "def": "An abandoned building or structure that pilots treat as a freestyle playground. Short for 'abandoned'."
+  },
+  {
+   "term": "Betaflight",
+   "def": "The most common open-source flight-control firmware, where rates, flight modes, and tuning are set up."
+  },
+  {
+   "term": "Blip",
+   "def": "A brief tap of throttle, used to nudge altitude or kick a stalled quad back into motion."
+  },
+  {
+   "term": "BNF / RTF",
+   "def": "Bind-N-Fly (needs your own radio) / Ready-To-Fly (includes everything)."
+  },
+  {
+   "term": "Cinewhoop",
+   "def": "A small ducted quad built for smooth cinematic flying in tight spaces."
+  },
+  {
+   "term": "CLM",
+   "def": "Camera-Locked Motion, keeping a subject fixed in frame throughout a trick, a scoring requirement in competition."
+  },
+  {
+   "term": "Disarm",
+   "def": "Cutting motor power. A 'slide disarm' or 'crash and disarm' ends a line deliberately."
+  },
+  {
+   "term": "Failsafe",
+   "def": "The programmed response when the quad loses its radio or video link, usually cutting the motors or holding position to prevent a flyaway."
+  },
+  {
+   "term": "FPV",
+   "def": "First-Person View, flying via a live camera feed to goggles or a screen. Is not a crime."
+  },
+  {
+   "term": "Freestyle",
+   "def": "Expressive, trick-oriented flying (as opposed to racing)."
+  },
+  {
+   "term": "Horizon mode",
+   "def": "A self-leveling mode that still lets you flip and roll, then eases back toward level when you release the sticks. Angle mode is fully self-leveling; Acro has no leveling at all."
+  },
+  {
+   "term": "Invert",
+   "def": "Flipping the quad upside-down; many tricks pass through or hold an inverted state."
+  },
+  {
+   "term": "LiPo",
+   "def": "Lithium-polymer battery, the high-discharge packs that power most FPV quads. Store and charge them carefully."
+  },
+  {
+   "term": "LOS",
+   "def": "Line-Of-Sight, keeping visual contact with the aircraft, often a legal requirement."
+  },
+  {
+   "term": "Powerloop",
+   "def": "A loop up-and-over an obstacle using throttle through the top; also a whole trick family."
+  },
+  {
+   "term": "Prop wash",
+   "def": "Turbulent air thrown off the quad's own props, felt as a jittery wobble when you descend through it or stop hard."
+  },
+  {
+   "term": "Punch / punch-out",
+   "def": "A sharp burst of throttle for a fast vertical climb."
+  },
+  {
+   "term": "Rates",
+   "def": "Radio settings that map stick travel to rotation speed. Lower rates = gentler, higher = snappier."
+  },
+  {
+   "term": "Rewind",
+   "def": "Reversing a motion back along its entry path, often out of a stall."
+  },
+  {
+   "term": "Stall",
+   "def": "Chopping throttle so the quad momentarily stops flying and hangs or drops before recovery."
+  },
+  {
+   "term": "Throttle",
+   "def": "Motor power, the left stick's vertical axis in Mode 2."
+  },
+  {
+   "term": "VTX",
+   "def": "Video transmitter, the part that beams the camera feed from the quad to your goggles."
+  },
+  {
+   "term": "Whoop",
+   "def": "A micro ducted FPV drone (typically 65 to 85mm); safe, agile, great for learning."
+  },
+  {
+   "term": "Yaw",
+   "def": "Rotation about the vertical axis, the drone turning left/right in place."
+  }
+ ],
+ "progression": [
+  {
+   "tier": "Beginner",
+   "items": [
+    {
+     "name": "Beginner Matty",
+     "variation": false
+    },
+    {
+     "name": "Beginner Switch",
+     "variation": false
+    },
+    {
+     "name": "Building Dive",
+     "variation": false
+    },
+    {
+     "name": "Cinnamon Roll",
+     "variation": false
+    },
+    {
+     "name": "Cradle",
+     "variation": false
+    },
+    {
+     "name": "Face Punch",
+     "variation": false
+    },
+    {
+     "name": "Flip",
+     "variation": false
+    },
+    {
+     "name": "Double Flip",
+     "variation": true
+    },
+    {
+     "name": "Segmented Flips/Rolls",
+     "variation": true
+    },
+    {
+     "name": "Gaps",
+     "variation": false
+    },
+    {
+     "name": "Inverted Rewind",
+     "variation": false
+    },
+    {
+     "name": "Jump Rope",
+     "variation": false
+    },
+    {
+     "name": "Knife Edge",
+     "variation": false
+    },
+    {
+     "name": "Reverse Knife Edge",
+     "variation": true
+    },
+    {
+     "name": "Maverick Loop",
+     "variation": false
+    },
+    {
+     "name": "Orbits",
+     "variation": false
+    },
+    {
+     "name": "Roll",
+     "variation": false
+    },
+    {
+     "name": "Double Roll",
+     "variation": true
+    },
+    {
+     "name": "Vanny Roll",
+     "variation": true
+    },
+    {
+     "name": "Side-Lock Rewind",
+     "variation": false
+    },
+    {
+     "name": "Split S",
+     "variation": false
+    },
+    {
+     "name": "540 Split S",
+     "variation": true
+    },
+    {
+     "name": "Split Stall Matty Rewind",
+     "variation": true
+    },
+    {
+     "name": "Stall Rewind",
+     "variation": false
+    },
+    {
+     "name": "Wall Ride",
+     "variation": false
+    },
+    {
+     "name": "Reverse Wall Ride",
+     "variation": true
+    },
+    {
+     "name": "Wall Tap",
+     "variation": false
+    },
+    {
+     "name": "Whiplash",
+     "variation": false
+    },
+    {
+     "name": "Yaw Spin",
+     "variation": false
+    },
+    {
+     "name": "Inverted Yaw Spin",
+     "variation": true
+    },
+    {
+     "name": "Barrel Roll",
+     "variation": false
+    },
+    {
+     "name": "Dive",
+     "variation": false
+    },
+    {
+     "name": "Land",
+     "variation": false
+    },
+    {
+     "name": "Loop",
+     "variation": false
+    },
+    {
+     "name": "Stall",
+     "variation": false
+    }
+   ]
+  },
+  {
+   "tier": "Novice",
+   "items": [
+    {
+     "name": "Anti Matty",
+     "variation": false
+    },
+    {
+     "name": "Burrito Roll",
+     "variation": false
+    },
+    {
+     "name": "Eject Roll",
+     "variation": false
+    },
+    {
+     "name": "Stellar Eject Roll",
+     "variation": true
+    },
+    {
+     "name": "Immelmann",
+     "variation": false
+    },
+    {
+     "name": "Juicy Flick",
+     "variation": false
+    },
+    {
+     "name": "Matty Flip",
+     "variation": false
+    },
+    {
+     "name": "Mavvelmann",
+     "variation": false
+    },
+    {
+     "name": "Mavvy Roll",
+     "variation": false
+    },
+    {
+     "name": "Perch",
+     "variation": false
+    },
+    {
+     "name": "Powerloop",
+     "variation": false
+    },
+    {
+     "name": "Inverted 360 Powerloop",
+     "variation": true
+    },
+    {
+     "name": "Roll Tap",
+     "variation": false
+    },
+    {
+     "name": "Side Loop",
+     "variation": false
+    },
+    {
+     "name": "Slide Disarm",
+     "variation": false
+    },
+    {
+     "name": "Snapback",
+     "variation": false
+    },
+    {
+     "name": "Stall 360 Rewind",
+     "variation": false
+    },
+    {
+     "name": "Stall Flip Rewind",
+     "variation": false
+    },
+    {
+     "name": "Backward Flying",
+     "variation": false
+    },
+    {
+     "name": "Boomerang",
+     "variation": false
+    },
+    {
+     "name": "Front Swing",
+     "variation": false
+    },
+    {
+     "name": "Juicy Eject",
+     "variation": false
+    },
+    {
+     "name": "Pendulum",
+     "variation": false
+    },
+    {
+     "name": "Slingshot",
+     "variation": false
+    },
+    {
+     "name": "Throwback",
+     "variation": false
+    },
+    {
+     "name": "Wall Bonk",
+     "variation": false
+    }
+   ]
+  },
+  {
+   "tier": "Intermediate",
+   "items": [
+    {
+     "name": "Blind Loop",
+     "variation": false
+    },
+    {
+     "name": "Ceiling Tap",
+     "variation": false
+    },
+    {
+     "name": "Cubik's Rube",
+     "variation": false
+    },
+    {
+     "name": "Double Dutch",
+     "variation": false
+    },
+    {
+     "name": "Downtown Tap",
+     "variation": false
+    },
+    {
+     "name": "Half Matty",
+     "variation": false
+    },
+    {
+     "name": "540 Half Matty",
+     "variation": true
+    },
+    {
+     "name": "Immelloop",
+     "variation": false
+    },
+    {
+     "name": "Inverted Uh-uh",
+     "variation": false
+    },
+    {
+     "name": "Loop Tap",
+     "variation": false
+    },
+    {
+     "name": "Matty Twister",
+     "variation": false
+    },
+    {
+     "name": "Power Flip",
+     "variation": false
+    },
+    {
+     "name": "Reversed Power Flip",
+     "variation": true
+    },
+    {
+     "name": "Power Matty",
+     "variation": false
+    },
+    {
+     "name": "Power Split",
+     "variation": false
+    },
+    {
+     "name": "Power Swap",
+     "variation": false
+    },
+    {
+     "name": "Rubik's Cube",
+     "variation": false
+    },
+    {
+     "name": "Split Yaw",
+     "variation": false
+    },
+    {
+     "name": "Splitback",
+     "variation": false
+    },
+    {
+     "name": "Stall Half Matty Rewind",
+     "variation": false
+    },
+    {
+     "name": "Stall Matty Rewind",
+     "variation": false
+    },
+    {
+     "name": "Trippy Spin",
+     "variation": false
+    },
+    {
+     "name": "Double Rolling Trippy Spin",
+     "variation": true
+    },
+    {
+     "name": "Trippy Switch",
+     "variation": false
+    },
+    {
+     "name": "True Barani",
+     "variation": false
+    },
+    {
+     "name": "Alley-Oop",
+     "variation": false
+    },
+    {
+     "name": "Backwards Dive",
+     "variation": false
+    },
+    {
+     "name": "Coin Drop",
+     "variation": false
+    },
+    {
+     "name": "Flat Bounce Rewind",
+     "variation": false
+    },
+    {
+     "name": "Inverted Lookback",
+     "variation": false
+    },
+    {
+     "name": "Juicy Cartwheel",
+     "variation": false
+    },
+    {
+     "name": "Juicy Double Roll",
+     "variation": false
+    },
+    {
+     "name": "Juicy Tracking-Lookback",
+     "variation": false
+    },
+    {
+     "name": "Laser Flip",
+     "variation": false
+    },
+    {
+     "name": "Lookback & Loop",
+     "variation": false
+    },
+    {
+     "name": "Outward Side Lock Rewind",
+     "variation": false
+    },
+    {
+     "name": "Sideways Powerloop",
+     "variation": false
+    },
+    {
+     "name": "Sideways Rewind",
+     "variation": false
+    },
+    {
+     "name": "Slides / Grinds",
+     "variation": false
+    },
+    {
+     "name": "Split-S Rewind",
+     "variation": false
+    },
+    {
+     "name": "Split-S to Stall Track",
+     "variation": false
+    },
+    {
+     "name": "Tracking Front Flip",
+     "variation": false
+    }
+   ]
+  },
+  {
+   "tier": "Advanced",
+   "items": [
+    {
+     "name": "Forani",
+     "variation": false
+    },
+    {
+     "name": "Half Mavvy",
+     "variation": false
+    },
+    {
+     "name": "Immelmatt",
+     "variation": false
+    },
+    {
+     "name": "Inverted Yaw Tracking",
+     "variation": false
+    },
+    {
+     "name": "Loop to Matty",
+     "variation": false
+    },
+    {
+     "name": "Matty 360",
+     "variation": false
+    },
+    {
+     "name": "Matty Roll",
+     "variation": false
+    },
+    {
+     "name": "Mavani",
+     "variation": false
+    },
+    {
+     "name": "Mavik's Loop",
+     "variation": false
+    },
+    {
+     "name": "Ninja Star",
+     "variation": false
+    },
+    {
+     "name": "Pole Dance",
+     "variation": false
+    },
+    {
+     "name": "Power Roll",
+     "variation": false
+    },
+    {
+     "name": "Power Switch",
+     "variation": false
+    },
+    {
+     "name": "Power Switch Tap",
+     "variation": false
+    },
+    {
+     "name": "Stall 540 Half Matty Rewind",
+     "variation": false
+    },
+    {
+     "name": "540 Delayed Front Flip",
+     "variation": false
+    },
+    {
+     "name": "Double Side Roll + 180 Inverted Yaw Spin",
+     "variation": false
+    },
+    {
+     "name": "Flip Rewind to Inverted Yaw Spin",
+     "variation": false
+    },
+    {
+     "name": "Inverted Yaw Spin Rewind",
+     "variation": false
+    },
+    {
+     "name": "Inverted Yaw Track Rewind",
+     "variation": false
+    },
+    {
+     "name": "Jackie Chan",
+     "variation": false
+    },
+    {
+     "name": "Juicy Flick Rewind",
+     "variation": false
+    },
+    {
+     "name": "Lookback + Roll + Inverted Yaw Spin",
+     "variation": false
+    },
+    {
+     "name": "Power Drill",
+     "variation": false
+    },
+    {
+     "name": "Rapid Look Back + Slow Double Roll",
+     "variation": false
+    },
+    {
+     "name": "Rapid Split-S + Inverted Yaw Spin Combo",
+     "variation": false
+    },
+    {
+     "name": "Rubik's Cube Pendulum",
+     "variation": false
+    },
+    {
+     "name": "Rufio",
+     "variation": false
+    },
+    {
+     "name": "Sbang Tornado",
+     "variation": false
+    },
+    {
+     "name": "Side Lookback + Inverted Yaw Spin",
+     "variation": false
+    },
+    {
+     "name": "SomerMatty",
+     "variation": false
+    }
+   ]
+  },
+  {
+   "tier": "Master",
+   "items": [
+    {
+     "name": "Barani",
+     "variation": false
+    },
+    {
+     "name": "Donkey Loop",
+     "variation": false
+    },
+    {
+     "name": "Flipani",
+     "variation": false
+    },
+    {
+     "name": "Rollani",
+     "variation": false
+    },
+    {
+     "name": "540 Flip + Roll + Inverted Yaw Spin",
+     "variation": false
+    },
+    {
+     "name": "Advanced Combo #3",
+     "variation": false
+    },
+    {
+     "name": "Eject Lookback Roll + Inverted Yaw Spin",
+     "variation": false
+    },
+    {
+     "name": "Look Back + Double Roll",
+     "variation": false
+    },
+    {
+     "name": "Sbang Ultimate Combo",
+     "variation": false
+    }
+   ]
+  }
+ ],
+ "sources": [
+  {
+   "title": "Tyrantt's Pro Whooper Tricktionary (All Tricks)",
+   "url": "https://prowhooper.com/all-tricks/",
+   "note": ""
+  },
+  {
+   "title": "Rotor Riot FPV Freestyle Tricktionary (video + blog)",
+   "url": "https://rotorriot.com/blogs/tutorials-guides/fpv-freestyle-tricktionary",
+   "note": ""
+  },
+  {
+   "title": "WREKD master list (mirrors the headmazta/Mazta FPV tutorial playlists)",
+   "url": "https://wrekd.com/pages/a-master-list-of-fpv-tricks-and-manuevers-and-how-to-do-",
+   "note": ""
+  },
+  {
+   "title": "Phantom FPV, 96 Tricks! ULTIMATE FPV Tricktionary (Freestyle Bible)",
+   "url": "https://www.youtube.com/watch?v=hIbHrO-VBu8",
+   "note": ""
+  },
+  {
+   "title": "stick inputs, beginner how-to",
+   "url": "https://rchobbylab.com/fpv-drone-freestyle-tricks/",
+   "note": ""
+  },
+  {
+   "title": "authoritative per-trick how-to, point values…",
+   "url": "https://prowhooper.com/all-tricks/",
+   "note": ""
+  },
+  {
+   "title": "prerequisites, practice progression, gear…",
+   "url": "https://prowhooper.com/ultimate-beginner-whoop-guide/",
+   "note": ""
+  },
+  {
+   "title": "common mistakes, practice drills",
+   "url": "https://astrorocketz.com/drills-for-flawless-fpv-matty-flips-power-loops/",
+   "note": ""
+  },
+  {
+   "title": "authoritative video tutorials, cross-check",
+   "url": "https://www.youtube.com/watch?v=0EqJ9C8KuTQ",
+   "note": ""
+  },
+  {
+   "title": "precise definitions, combo/competition context",
+   "url": "https://www.internationalgameofwhoop.com/challenges",
+   "note": ""
+  },
+  {
+   "title": "stick-input notation, cross-reference",
+   "url": "https://get-the-manual.github.io/fpv/30_Polety/26_Katalog_Tryukov/",
+   "note": ""
+  },
+  {
+   "title": "juicy double roll tutorial",
+   "url": "https://www.youtube.com/watch?v=yoMA24NYatU",
+   "note": ""
+  }
+ ]
+}
