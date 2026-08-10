@@ -191,7 +191,7 @@ function loadIso() {
   if (isoState !== 'idle') return;
   isoState = 'loading';
   var s = document.createElement('script');
-  s.src = 'js/iso.js?v=10';
+  s.src = 'js/iso.js?v=11';
   s.onerror = function () { isoState = 'failed'; paintIso(); };
   document.head.appendChild(s);
 }
@@ -688,21 +688,37 @@ function renderStorageStatus() {
   el.innerHTML = html;
 }
 
+/* Local time, not UTC, so the name matches the clock the user just looked at.
+   Ordered largest unit first so the files sort chronologically in any file
+   browser, and punctuated with hyphens because a colon is not a legal filename
+   character on Windows. */
+function stamp(d) {
+  function p(n) { return (n < 10 ? '0' : '') + n; }
+  return d.getFullYear() + '-' + p(d.getMonth() + 1) + '-' + p(d.getDate()) +
+         '-' + p(d.getHours()) + p(d.getMinutes());
+}
+
 function exportProgress() {
+  var now = new Date();
   var payload = {
     app: 'thetricktionary',
     version: 1,
-    exported: new Date().toISOString(),
+    exported: now.toISOString(),
     theme: document.documentElement.className,
     progress: progress
   };
+  /* Every export keeps its own name, so backups accumulate instead of the
+     browser silently appending "(1)" and leaving you to guess which is newest. */
+  var name = 'tricktionary-progress-' + stamp(now) + '.json';
   var blob = new Blob([JSON.stringify(payload, null, 2)], { type: 'application/json' });
   var a = document.createElement('a');
   a.href = URL.createObjectURL(blob);
-  a.download = 'tricktionary-progress.json';
+  a.download = name;
   a.click();
   setTimeout(function () { URL.revokeObjectURL(a.href); }, 1000);
-  $('#ioStatus').textContent = 'Exported ' + Object.keys(progress).length + ' tricks.';
+  var n = Object.keys(progress).length;
+  $('#ioStatus').textContent =
+    'Exported ' + n + ' trick' + (n === 1 ? '' : 's') + ' to ' + name;
 }
 
 function importProgress(file) {

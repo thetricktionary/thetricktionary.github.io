@@ -8,16 +8,16 @@
      .ico and the touch icon are fallbacks, because Safari ignores SVG favicons
      and a bare /favicon.ico request would otherwise 404. All are generated
      from one geometry by tools/make-icons.py. -->
-<link rel="icon" href="favicon.ico?v=10" sizes="32x32">
-<link rel="icon" type="image/svg+xml" href="favicon.svg?v=10">
-<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=10">
+<link rel="icon" href="favicon.ico?v=11" sizes="32x32">
+<link rel="icon" type="image/svg+xml" href="favicon.svg?v=11">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=11">
 <meta name="description" content="A visual field guide to FPV freestyle tricks: 143 tricks with flight paths, control inputs, how-to, and a learning progression you can tick off. Works offline.">
 <meta name="theme-color" content="#131211" media="(prefers-color-scheme: dark)">
 <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Tricktionary">
-<link rel="stylesheet" href="css/style.css?v=10">
+<link rel="stylesheet" href="css/style.css?v=11">
 <script>
   /* Set the theme before first paint so a dark-mode load never flashes white.
      Dark is the default; light is only used if it was explicitly chosen. */
@@ -254,8 +254,10 @@
       Your mastery stars and theme live in this browser's storage. Clearing site data wipes
       it, Safari drops it after about a week without a visit, and it does not follow you to
       another browser, device, or domain. Export writes it all to one file you can keep or
-      carry across. Importing <b>merges</b> into what is here already, keeping the higher
-      star level for any trick in both, so restoring an old backup never costs you progress.
+      carry across. Each export is stamped with the date and time it was taken, so backups
+      pile up in order instead of overwriting each other. Importing <b>merges</b> into what
+      is here already, keeping the higher star level for any trick in both, so restoring an
+      old backup never costs you progress.
     </div>
     <div class="row wrap" style="max-width:520px">
       <button id="btnExport" style="flex:1">Export progress</button>
@@ -306,8 +308,8 @@
 
 <div id="toast"></div>
 
-<script src="js/data.js?v=10"></script>
-<script src="js/app.js?v=10"></script>
+<script src="js/data.js?v=11"></script>
+<script src="js/app.js?v=11"></script>
 
 <!-- Default Statcounter code for The Tricktionary
 https://thetricktionary.github.io/ -->
