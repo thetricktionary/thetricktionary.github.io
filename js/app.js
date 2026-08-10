@@ -86,7 +86,7 @@ function loadIso() {
   if (isoState !== 'idle') return;
   isoState = 'loading';
   var s = document.createElement('script');
-  s.src = 'js/iso.js?v=7';
+  s.src = 'js/iso.js?v=8';
   s.onerror = function () { isoState = 'failed'; paintIso(); };
   document.head.appendChild(s);
 }
@@ -235,12 +235,60 @@ function renderChips() {
     chip('Mastered', 'mastered', 'prog', null);
 }
 
+/* ── "missing a trick?" tile ──────────────────────────────────────────── */
+var ISSUE_NEW = 'https://github.com/thetricktionary/thetricktionary.github.io/issues/new';
+
+/* A new-issue link with everything filled in but the URL. The category list is
+   read off the data so it cannot drift from the categories the site filters by. */
+function submitIssueURL() {
+  var cats = {};
+  TRICKS.forEach(function (t) { cats[t.category] = 1; });
+  var body = [
+    'Thanks for adding to the guide. Fill in what you know; anything you leave blank is fine.',
+    '',
+    '**Trick name:** ',
+    '',
+    '**Link to a tutorial or clip:** <!-- paste the URL here -->',
+    '',
+    '**Difficulty:** ' + DIFFS.join(' / ') + '  <!-- delete the ones that do not apply -->',
+    '',
+    '**Category:** ' + Object.keys(cats).sort().join(' / ') + '  <!-- delete the rest -->',
+    '',
+    '**How it goes:** ',
+    '',
+    '**Who came up with it, if known:** ',
+    '',
+    '---',
+    'Submitted from the Tricktionary site.'
+  ].join('\n');
+  return ISSUE_NEW + '?title=' + encodeURIComponent('New trick: ') +
+         '&body=' + encodeURIComponent(body);
+}
+
+/* Sits at the end of the grid in a trick card's shape, and stays there when
+   the filters match nothing: an empty slot in the book, waiting to be filled.
+   The skeleton blocks stand in for a real entry's illustration, name, chips
+   and how-to, so it reads as a trick that has not been written yet. */
+function submitTile() {
+  return '<a class="trick-card submit-tile" href="' + esc(submitIssueURL()) + '"' +
+    ' target="_blank" rel="noopener" aria-label="Missing a trick? Submit it on GitHub">' +
+    '<span class="sk sk-thumb" aria-hidden="true"><span class="sk-plus">+</span></span>' +
+    '<span class="sk sk-name" aria-hidden="true"></span>' +
+    '<span class="tc-meta" aria-hidden="true">' +
+      '<span class="sk sk-chip"></span><span class="sk sk-chip short"></span></span>' +
+    '<span class="sk-lines" aria-hidden="true">' +
+      '<span class="sk sk-line"></span><span class="sk sk-line"></span>' +
+      '<span class="sk sk-line short"></span></span>' +
+    '<span class="submit-cta"><b>Missing a trick?</b><span>Submit it here</span></span>' +
+  '</a>';
+}
+
 function renderList() {
   var hits = TRICKS.filter(matches);
   $('#resultCount').textContent = hits.length === TRICKS.length
     ? TRICKS.length + ' tricks'
     : hits.length + ' of ' + TRICKS.length + ' tricks';
-  $('#trickCards').innerHTML = hits.length ? hits.map(function (t) {
+  var cards = hits.map(function (t) {
     return '<button class="trick-card" data-slug="' + t.slug + '">' +
       isoSlot(t.slug, 'iso-thumb', false) +
       '<span class="tc-name">' + esc(t.name) + '</span>' +
@@ -248,7 +296,12 @@ function renderList() {
         '<span class="cat">' + esc(t.category) + '</span>' +
         '<span class="tc-stars">' + starsHTML(t.slug, false) + '</span></span>' +
       '<span class="tc-blurb">' + esc(t.howto) + '</span></button>';
-  }).join('') : '<div class="empty">No trick matches that. Try a looser search, or Reset.</div>';
+  }).join('');
+  /* The submit tile is outside the map, so it is still there when the filters
+     match nothing: there is always somewhere to add what is missing. */
+  $('#trickCards').innerHTML =
+    (hits.length ? '' : '<div class="empty">No trick matches that. Try a looser search, or Reset.</div>') +
+    cards + submitTile();
   renderChips();
   watchIso($('#trickCards'));
 }
