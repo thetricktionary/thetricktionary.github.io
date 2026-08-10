@@ -7,6 +7,11 @@ tricks, and its sources.
 
 Live at **https://thetricktionary.github.io/**
 
+Fuller documentation is in the
+[wiki](https://github.com/thetricktionary/thetricktionary.github.io/wiki):
+how to use the site, how progress and backups work, the architecture, the data
+pipeline, deploying, and troubleshooting.
+
 ## What's in it
 
 - **Tricks** &mdash; all 143 entries, carrying everything a book page does: the
