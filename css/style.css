@@ -363,8 +363,16 @@ input[type=checkbox] { accent-color: var(--accent); }
   border: none; background: none; padding: 0; line-height: 1;
   color: var(--line); font-size: 1rem;
 }
-.stars.set button { cursor: pointer; }
+/* A star is a small glyph, so the button is padded out to something a finger
+   can hit. The padding does not change how big the star looks, and the gap
+   goes to zero so neighbouring hit areas sit flush instead of overlapping. */
+.stars.set { gap: 0; }
+.stars.set button { cursor: pointer; padding: .22rem .16rem; }
 .stars.set button:hover { color: var(--accent); background: none; }
+@media (max-width: 700px) {
+  .stars.set button { padding: .4rem .3rem; }
+  .prog-row .stars { font-size: .95rem; }
+}
 .stars .on { color: var(--accent); }
 .tc-stars { margin-left: auto; }
 

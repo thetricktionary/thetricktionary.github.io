@@ -131,6 +131,7 @@ var bySlug = {};
 TRICKS.forEach(function (t) { bySlug[t.slug] = t; });
 
 var filters = { q: '', diff: '', cat: '', prog: '' };
+var openSlug = null;      // slug of the entry currently on screen, if any
 
 function saveProgress() {
   var ok = save(KEY_PROGRESS, progress);
@@ -191,7 +192,7 @@ function loadIso() {
   if (isoState !== 'idle') return;
   isoState = 'loading';
   var s = document.createElement('script');
-  s.src = 'js/iso.js?v=11';
+  s.src = 'js/iso.js?v=12';
   s.onerror = function () { isoState = 'failed'; paintIso(); };
   document.head.appendChild(s);
 }
@@ -242,20 +243,82 @@ function watchIso(root) {
   }
   $$('[data-iso]:not([data-want])', root).forEach(function (el) { isoWatcher.observe(el); });
 }
-function starsHTML(slug, interactive) {
+var STAR_LABELS = ['Landed it', 'Clean form', 'Perfect form'];
+
+function starsInner(slug, interactive) {
   var n = stars(slug), out = '';
   for (var i = 1; i <= 3; i++) {
     var on = i <= n ? ' on' : '';
     if (interactive) {
       /* Clicking the star you are already on clears back down to it minus one,
-         so the same control both sets and unsets a level. */
-      out += '<button class="' + on.trim() + '" data-star="' + i + '" data-slug="' + slug +
-             '" title="' + ['Landed it', 'Clean form', 'Perfect form'][i - 1] + '">★</button>';
+         so the same control both sets and unsets a level. Clicking the single
+         lit star therefore unsets the trick, which the tooltip now says
+         outright: it is not behaviour anyone would guess at. */
+      var title = (i === n) ? STAR_LABELS[i - 1] + ' (click to clear)' : STAR_LABELS[i - 1];
+      out += '<button class="' + on.trim() + '" type="button" data-star="' + i +
+             '" data-slug="' + slug + '" title="' + title + '">★</button>';
     } else {
       out += '<span class="' + on.trim() + '">★</span>';
     }
   }
-  return '<span class="stars' + (interactive ? ' set' : '') + '">' + out + '</span>';
+  return out;
+}
+
+function starsHTML(slug, interactive) {
+  return '<span class="stars' + (interactive ? ' set' : '') + '" data-for="' + slug + '">' +
+         starsInner(slug, interactive) + '</span>';
+}
+
+/* Repaints everything showing this trick's level, in place. Re-rendering the
+   whole entry instead scrolled the reader back to the top on every click,
+   which made setting or clearing a star look like it had done something else
+   entirely. */
+function refreshStars(slug) {
+  var n = stars(slug);
+
+  $$('.stars[data-for="' + slug + '"]').forEach(function (w) {
+    /* Toggle the existing children rather than rewriting the widget. Replacing
+       innerHTML would destroy the very button that was just clicked, which
+       throws away keyboard focus mid-interaction. */
+    var kids = w.children;
+    for (var i = 0; i < kids.length; i++) {
+      var lvl = i + 1;
+      kids[i].classList.toggle('on', lvl <= n);
+      if (kids[i].tagName === 'BUTTON') {
+        kids[i].title = (lvl === n) ? STAR_LABELS[i] + ' (click to clear)' : STAR_LABELS[i];
+      }
+    }
+  });
+
+  if (openSlug === slug) {
+    $$('#trickDetail .mastery li').forEach(function (li, i) {
+      li.classList.toggle('reached', i < n);
+    });
+  }
+
+  var box = $('[data-check="' + slug + '"]');
+  if (box) {
+    box.checked = n > 0;
+    var row = box.closest('.prog-row');
+    if (row) row.classList.toggle('done', n > 0);
+  }
+
+  refreshProgressionTotals();
+  renderProgCount();
+}
+
+/* Tier bars, tier counts and the overall summary, without rebuilding the list */
+function refreshProgressionTotals() {
+  var host = $('#progTiers');
+  if (!host || !host.children.length) return;
+  PROGRESSION.forEach(function (tier) {
+    var sec = $('[data-tier="' + tier.tier + '"]', host);
+    if (!sec) return;
+    var landed = tier.items.filter(function (i) { return stars(i.slug) > 0; }).length;
+    $('.bar > i', sec).style.width = Math.round(landed / tier.items.length * 100) + '%';
+    $('.count', sec).textContent = landed + '/' + tier.items.length;
+  });
+  renderProgSummary();
 }
 
 /* ── theme ────────────────────────────────────────────────────────────── */
@@ -450,7 +513,7 @@ function openTrick(t) {
 
       '<section class="panel span-all">' +
         '<h3 class="mod-h">Step by step control inputs' +
-          '<small>Mode 2. Arrow: stick moving. Dot at the end: held. Empty centre: centered.</small></h3>' +
+          '<small>Arrow: stick moving. Dot at the end: held. Empty centre: centered.</small></h3>' +
         '<ol class="steps' + (t.inputs ? ' with-sticks' : '') + '">' +
           t.steps.map(function (s, i) {
             var inp = t.inputs && t.inputs[i];
@@ -501,6 +564,7 @@ function openTrick(t) {
   $('#trickDetail').innerHTML = html;
   $('#trickDetail').hidden = false;
   $('#trickList').hidden = true;
+  openSlug = t.slug;
   loadIso(); paintIso();
   window.scrollTo(0, 0);
 }
@@ -508,6 +572,7 @@ function openTrick(t) {
 function closeTrick() {
   $('#trickDetail').hidden = true;
   $('#trickList').hidden = false;
+  openSlug = null;
 }
 
 /* ── progression ──────────────────────────────────────────────────────── */
@@ -522,7 +587,7 @@ function renderProgCount() {
   }
 }
 
-function renderProgression() {
+function renderProgSummary() {
   var done = TRICKS.filter(function (t) { return stars(t.slug) > 0; }).length;
   var mastered = TRICKS.filter(function (t) { return stars(t.slug) === 3; }).length;
   var pct = Math.round(done / TRICKS.length * 100);
@@ -534,11 +599,16 @@ function renderProgression() {
       '<span class="hint">' + done + ' of ' + TRICKS.length + ' landed &middot; ' +
         mastered + ' mastered</span>' +
     '</div>';
+}
+
+function renderProgression() {
+  renderProgSummary();
 
   $('#progTiers').innerHTML = PROGRESSION.map(function (tier) {
     var landed = tier.items.filter(function (i) { return stars(i.slug) > 0; }).length;
     var p = Math.round(landed / tier.items.length * 100);
-    return '<section class="panel" style="--tier:var(--tier-' + tier.tier.toLowerCase() + ')">' +
+    return '<section class="panel" data-tier="' + esc(tier.tier) +
+      '" style="--tier:var(--tier-' + tier.tier.toLowerCase() + ')">' +
       '<div class="tier-head"><h3>' + diffChip(tier.tier) + '</h3>' +
         '<span class="bar tier"><i style="width:' + p + '%"></i></span>' +
         '<span class="count">' + landed + '/' + tier.items.length + '</span></div>' +
@@ -548,7 +618,9 @@ function renderProgression() {
           '<input type="checkbox" data-check="' + i.slug + '"' + (n ? ' checked' : '') +
             ' aria-label="' + esc(i.name) + '">' +
           '<button class="pname" data-goto="' + i.slug + '">' + esc(i.name) + '</button>' +
-          starsHTML(i.slug, false) +
+          /* Live here too: the checkbox only says landed or not, and the two
+             and three star levels are worth setting without opening the entry. */
+          starsHTML(i.slug, true) +
         '</div></li>';
       }).join('') + '</ul></section>';
   }).join('');
@@ -811,9 +883,7 @@ function init() {
     if (star) {
       var cur = stars(star.dataset.slug), lvl = +star.dataset.star;
       setStars(star.dataset.slug, cur === lvl ? lvl - 1 : lvl);
-      var t = bySlug[star.dataset.slug];
-      if (t && !$('#trickDetail').hidden) openTrick(t);
-      renderProgression();
+      refreshStars(star.dataset.slug);
       return;
     }
     var goto = e.target.closest('[data-goto]');
@@ -831,7 +901,7 @@ function init() {
     /* Ticking records a landing (one star); unticking clears the trick out
        entirely, stars and all. */
     setStars(box.dataset.check, box.checked ? Math.max(1, stars(box.dataset.check)) : 0);
-    renderProgression();
+    refreshStars(box.dataset.check);
   });
 
   $('#glossarySearch').addEventListener('input', function (e) { renderGlossary(e.target.value); });
