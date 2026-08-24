@@ -29,8 +29,8 @@ pipeline, deploying, and troubleshooting.
   drawn examples, and the difficulty scale.
 - **Glossary** &mdash; 28 terms, filterable.
 - **Safety** &mdash; rules, airspace, line of sight, and where to fly.
-- **Settings** &mdash; light/dark theme, export/import of your progress, and the
-  full source attribution.
+- **Settings** &mdash; light/dark theme, export/import of your progress,
+  auto-save to a file, and the full source attribution.
 
 Dark mode is the default. Everything you tick is stored in your browser and
 never leaves it unless you export it.
@@ -61,8 +61,15 @@ A user keeps their stars across every update. Three guards back that up:
 
 What is still outside the site's control: moving to a custom domain changes the
 origin and storage does not follow, Safari drops script-written storage after
-about a week without a visit, and clearing site data wipes it. Export is the
-answer to all three.
+about a week without a visit, and clearing site data wipes it.
+
+**Auto-save to a file** answers all three. Settings offers a file picker; pick a
+file once and progress is written to it whenever a star changes, debounced. The
+handle lives in IndexedDB so it outlasts a reload, and the file itself is a
+normal backup that Import understands. Point it at a synced folder and the copy
+survives the browser entirely. Chromium desktop only, since the File System
+Access API exists nowhere else; the panel is hidden where it is unsupported and
+manual export stays the way.
 
 ## Run it
 
