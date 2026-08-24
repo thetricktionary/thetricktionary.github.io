@@ -140,6 +140,7 @@ function saveProgress() {
   if (!ok) warnStorageOnce();
   renderProgCount();
   renderStorageStatus();
+  autosaveSchedule();
 }
 
 var warnedStorage = false;
@@ -192,7 +193,7 @@ function loadIso() {
   if (isoState !== 'idle') return;
   isoState = 'loading';
   var s = document.createElement('script');
-  s.src = 'js/iso.js?v=12';
+  s.src = 'js/iso.js?v=13';
   s.onerror = function () { isoState = 'failed'; paintIso(); };
   document.head.appendChild(s);
 }
@@ -325,6 +326,7 @@ function refreshProgressionTotals() {
 function setTheme(mode) {
   document.documentElement.className = mode;
   save(KEY_THEME, mode);
+  autosaveSchedule();      // the payload carries the theme, so keep it current
   $('#btnThemeDark').classList.toggle('on', mode === 'dark');
   $('#btnThemeLight').classList.toggle('on', mode === 'light');
   $('#btnThemeDark').style.borderColor = mode === 'dark' ? 'var(--accent)' : '';
@@ -770,15 +772,22 @@ function stamp(d) {
          '-' + p(d.getHours()) + p(d.getMinutes());
 }
 
-function exportProgress() {
-  var now = new Date();
-  var payload = {
+/* The one shape a backup takes. Export writes it to a download, auto-save
+   writes the same thing to a chosen file, so either is a normal backup that
+   Import already understands. */
+function backupPayload() {
+  return {
     app: 'thetricktionary',
     version: 1,
-    exported: now.toISOString(),
+    exported: new Date().toISOString(),
     theme: document.documentElement.className,
     progress: progress
   };
+}
+
+function exportProgress() {
+  var now = new Date();
+  var payload = backupPayload();
   /* Every export keeps its own name, so backups accumulate instead of the
      browser silently appending "(1)" and leaving you to guess which is newest. */
   var name = 'tricktionary-progress-' + stamp(now) + '.json';
@@ -826,6 +835,199 @@ function importProgress(file) {
     toast('Progress imported');
   };
   reader.readAsText(file);
+}
+
+
+/* ── Auto-save to a file ──────────────────────────────────────────────────
+   The File System Access API hands back a handle to a file the user picked.
+   The handle is structured-cloneable, so it can live in IndexedDB and outlast
+   a reload, and Chrome can grant it permission for every visit. After one
+   dialog, progress writes itself to that file whenever a star changes.
+
+   This answers the limits listed under storage durability above. Clearing site
+   data still takes the handle with it, the same as everything else; what it
+   does not take is the file. Point it at a synced folder and there is a copy
+   off this machine that survives the browser entirely, and survives a move to
+   a custom domain, which localStorage does not.
+
+   Chromium desktop only. Firefox and every browser on iOS have no such API,
+   so the panel simply never appears there and manual export stays the way. */
+
+var IDB_NAME = 'tricktionary';
+var IDB_STORE = 'kv';
+var IDB_HANDLE_KEY = 'autosave-handle';
+var AUTOSAVE_DEBOUNCE = 1500;
+
+function autosaveSupported() {
+  return !!(window.showSaveFilePicker && window.indexedDB);
+}
+
+function idb() {
+  return new Promise(function (resolve, reject) {
+    var req = indexedDB.open(IDB_NAME, 1);
+    req.onupgradeneeded = function () {
+      if (!req.result.objectStoreNames.contains(IDB_STORE)) req.result.createObjectStore(IDB_STORE);
+    };
+    req.onsuccess = function () { resolve(req.result); };
+    req.onerror = function () { reject(req.error); };
+  });
+}
+
+function idbDo(mode, fn) {
+  return idb().then(function (db) {
+    return new Promise(function (resolve, reject) {
+      var tx = db.transaction(IDB_STORE, mode);
+      var req = fn(tx.objectStore(IDB_STORE));
+      tx.oncomplete = function () { resolve(req && req.result); };
+      tx.onerror = function () { reject(tx.error); };
+    });
+  });
+}
+
+var autosave = { handle: null, name: '', at: null, error: '', perm: 'granted', timer: null, busy: false };
+
+function autosaveLoad() {
+  if (!autosaveSupported()) return Promise.resolve();
+  return idbDo('readonly', function (st) { return st.get(IDB_HANDLE_KEY); })
+    .then(function (h) {
+      if (!h) return;
+      autosave.handle = h;
+      autosave.name = h.name || 'a file';
+      /* queryPermission never prompts. Asking for permission needs a user
+         gesture, so whatever it reports is recorded and acted on from a
+         button rather than nagged about on load.
+
+         'prompt' here is the ordinary case, not a fault: browsers hand out
+         file-write permission for the session, so a refresh drops back to
+         asking unless the grant was made permanent in the browser's own
+         dialog. 'denied' is the genuine problem. They read very differently
+         and must not share a message. */
+      return h.queryPermission({ mode: 'readwrite' }).then(function (state) {
+        autosave.perm = state;
+      });
+    })
+    .catch(function () { /* no handle, or storage refused: manual export stands */ })
+    .then(renderAutosave);
+}
+
+function autosavePick() {
+  if (!autosaveSupported()) return;
+  window.showSaveFilePicker({
+    /* Named for the site rather than just the app, so a file sitting in a
+       folder months later still says where it came from. */
+    suggestedName: 'thetricktionary-github-io.json',
+    types: [{ description: 'Tricktionary progress', accept: { 'application/json': ['.json'] } }]
+  }).then(function (h) {
+    autosave.handle = h;
+    autosave.name = h.name || 'a file';
+    autosave.error = '';
+    return idbDo('readwrite', function (st) { return st.put(h, IDB_HANDLE_KEY); })
+      .then(function () { return autosaveWrite(true); });
+  }).catch(function (err) {
+    /* Cancelling the dialog is not a failure. */
+    if (err && err.name === 'AbortError') return;
+    autosave.error = (err && err.message) || 'could not use that file';
+    renderAutosave();
+  });
+}
+
+function autosaveStop() {
+  autosave.handle = null; autosave.name = ''; autosave.at = null;
+  autosave.error = ''; autosave.perm = 'granted';
+  clearTimeout(autosave.timer);
+  idbDo('readwrite', function (st) { return st.delete(IDB_HANDLE_KEY); })
+    .catch(function () {})
+    .then(renderAutosave);
+}
+
+/* Writes the same payload the export button produces, so the file is a normal
+   backup that Import already understands. */
+function autosaveWrite(loud) {
+  if (!autosave.handle || autosave.busy) return Promise.resolve();
+  autosave.busy = true;
+  var h = autosave.handle;
+  return h.queryPermission({ mode: 'readwrite' }).then(function (state) {
+    autosave.perm = state;
+    if (state !== 'granted') throw new Error('permission');
+    return h.createWritable();
+  }).then(function (w) {
+    return w.write(JSON.stringify(backupPayload(), null, 2)).then(function () { return w.close(); });
+  }).then(function () {
+    autosave.at = new Date();
+    autosave.error = '';
+    if (loud) toast('Auto-saving to ' + autosave.name);
+  }).catch(function (err) {
+    if (!autosave.error) autosave.error = (err && err.message) || 'write failed';
+  }).then(function () {
+    autosave.busy = false;
+    renderAutosave();
+  });
+}
+
+/* Called on every saveProgress(). Debounced, because stepping a star from
+   three down to nothing fires three writes in as many seconds. */
+function autosaveSchedule() {
+  if (!autosave.handle) return;
+  clearTimeout(autosave.timer);
+  autosave.timer = setTimeout(function () { autosaveWrite(false); }, AUTOSAVE_DEBOUNCE);
+}
+
+function autosaveReconnect() {
+  if (!autosave.handle) return;
+  autosave.handle.requestPermission({ mode: 'readwrite' }).then(function (state) {
+    autosave.perm = state;
+    if (state === 'granted') { autosave.error = ''; return autosaveWrite(true); }
+    renderAutosave();
+  }).catch(function () { renderAutosave(); });
+}
+
+function fmtWhen(d) {
+  if (!d || isNaN(d)) return '';
+  return d.toLocaleString(undefined, { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' });
+}
+
+function renderAutosave() {
+  var panel = $('#autosavePanel');
+  if (!panel) return;
+  if (!autosaveSupported()) { panel.hidden = true; return; }
+  panel.hidden = false;
+
+  var on = !!autosave.handle;
+  $('#btnAutosavePick').textContent = on ? 'Choose a different file...' : 'Choose a file...';
+  $('#btnAutosaveNow').hidden = !on;
+  $('#btnAutosaveStop').hidden = !on;
+
+  var el = $('#autosaveStatus');
+  if (!on) {
+    el.innerHTML = 'Not set up. Nothing is written anywhere until you pick a file.';
+    return;
+  }
+  /* Paused, which is where a refresh normally leaves things. Said plainly,
+     with the way to stop it happening every time. */
+  if (autosave.perm === 'prompt') {
+    el.innerHTML = 'Paused. Browsers allow writing to a file for one visit at a ' +
+      'time, so this asks again after a refresh. ' +
+      '<button class="mini" id="btnAutosaveReconnect">Resume</button>' +
+      '<span class="hint" style="display:block;margin-top:.4rem">Choosing ' +
+      '<b>Allow on every visit</b> in the browser prompt stops it asking again.</span>';
+    $('#btnAutosaveReconnect').addEventListener('click', autosaveReconnect);
+    return;
+  }
+  if (autosave.perm === 'denied') {
+    el.innerHTML = '<b class="warn">This browser is blocking writes to ' +
+      esc(autosave.name) + '.</b> Nothing is being saved to it. Allow file editing ' +
+      'for this site in the browser settings, or pick the file again. ' +
+      '<button class="mini" id="btnAutosaveReconnect">Try again</button>';
+    $('#btnAutosaveReconnect').addEventListener('click', autosaveReconnect);
+    return;
+  }
+  if (autosave.error) {
+    el.innerHTML = '<b class="warn">' + esc(autosave.name) + ' could not be written:</b> ' +
+      esc(autosave.error);
+    return;
+  }
+  el.textContent = 'Saving to ' + autosave.name +
+    (autosave.at ? ', last written ' + fmtWhen(autosave.at) : ', not written yet') + '.';
 }
 
 /* ── wiring ───────────────────────────────────────────────────────────── */
@@ -915,6 +1117,11 @@ function init() {
     if (e.target.files[0]) importProgress(e.target.files[0]);
     e.target.value = '';
   });
+  $('#btnAutosavePick').addEventListener('click', autosavePick);
+  $('#btnAutosaveNow').addEventListener('click', function () { autosaveWrite(true); });
+  $('#btnAutosaveStop').addEventListener('click', autosaveStop);
+  autosaveLoad();
+
   $('#btnResetProgress').addEventListener('click', function () {
     if (!confirm('Clear every mastery star? This cannot be undone.')) return;
     progress = {};
