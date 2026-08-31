@@ -17,11 +17,76 @@
    "Unwind and fly out over the back"
   ],
   "inputs": [
-   { "L": [[0, 1]], "R": null, "Lh": true, "Rh": false },
-   { "L": [[-1, 0]], "R": [[1, 0]], "Lh": false, "Rh": false },
-   { "L": [[1, 0]], "R": [[-1, 0]], "Lh": false, "Rh": false },
-   { "L": [[1, 0]], "R": [[-1, 0]], "Lh": true, "Rh": true },
-   { "L": [[0, 1]], "R": null, "Lh": true, "Rh": false }
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "Lh": true,
+    "Rh": true
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   }
   ],
   "prereqs": [
    "A solid Trippy Spin either direction",
@@ -35,14 +100,148 @@
    "Objects too far apart to cross the waist without a straight run"
   ],
   "variations": [
-   { "name": "Trippy Spin", "note": "One object, no reversal." },
-   { "name": "Trippy Switch", "note": "The reversal on its own, around a single object." }
+   {
+    "name": "Trippy Spin",
+    "note": "One object, no reversal."
+   },
+   {
+    "name": "Trippy Switch",
+    "note": "The reversal on its own, around a single object."
+   }
   ],
   "related": [
-   { "name": "Trippy Spin", "note": "The orbit each half is built from." },
-   { "name": "Trippy Switch", "note": "Where the direction change comes from." },
-   { "name": "Pole Dance", "note": "Upright orbits of a single pole." },
-   { "name": "Orbits", "note": "The upright, ground-level version." }
+   {
+    "name": "Trippy Spin",
+    "note": "The orbit each half is built from."
+   },
+   {
+    "name": "Trippy Switch",
+    "note": "Where the direction change comes from."
+   },
+   {
+    "name": "Pole Dance",
+    "note": "Upright orbits of a single pole."
+   },
+   {
+    "name": "Orbits",
+    "note": "The upright, ground-level version."
+   }
+  ],
+  "sources": [],
+  "page": null,
+  "pdfPage": null,
+  "addedOnSite": true
+ },
+ {
+  "name": "Trippy Vortex",
+  "difficulty": "Advanced",
+  "category": "Gaps",
+  "howto": "A trippy spin threaded through a gap. Set the orbit up off to one side of a panel so that one half of every revolution passes through a gap in it and the other half swings round its open edge, then hold the inverted spin and let it sink a little each turn. The gap is the same kind of opening a Ninja Star knife-edges through, turned on its side: wide and short rather than tall and narrow, so the quad can pass through it flat while it orbits. Also called the Trippy Gap.",
+  "mastery": [
+   "Orbit through the gap once and come out still flying.",
+   "Two clean turns through the gap, object held in frame.",
+   "Continuous sinking spiral, every pass centered in the gap."
+  ],
+  "steps": [
+   "Climb inverted into the orbit beside the panel",
+   "Trippy orbit round the open edge, roll and yaw opposite ways",
+   "Thread the slot on the far side, sinking a little each turn",
+   "Unwind and fly out the front"
+  ],
+  "inputs": [
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": false,
+    "Rh": false
+   },
+   {
+    "L": [
+     [
+      -1,
+      0
+     ]
+    ],
+    "R": [
+     [
+      1,
+      0
+     ]
+    ],
+    "Lh": true,
+    "Rh": true
+   },
+   {
+    "L": [
+     [
+      0,
+      1
+     ]
+    ],
+    "R": null,
+    "Lh": true,
+    "Rh": false
+   }
+  ],
+  "prereqs": [
+   "A solid Trippy Spin you can hold for two turns",
+   "Comfortable putting a quad through a gap without looking at it"
+  ],
+  "practice": "Needs a gap you can orbit past rather than just fly through: a doorway, a window, a bando opening, anything with an edge you can swing round on one side. Fly the orbit clear of the gap first and note where the far side of it crosses the opening, because that is the point you have to hit every single turn. Give the gap plenty of margin before you start letting the spin sink.",
+  "mistakes": [
+   "Orbiting too wide, so the pass hits the frame instead of the gap",
+   "Sinking faster than the gap is tall, and clipping its lower edge",
+   "Losing the inverted hang while the gap is out of frame",
+   "Drifting the orbit off centre so only one side lines up"
+  ],
+  "variations": [
+   {
+    "name": "Trippy Spin",
+    "note": "The same orbit, with nothing to thread."
+   },
+   {
+    "name": "Ninja Star",
+    "note": "Through the gap, but straight and knife-edge."
+   }
+  ],
+  "related": [
+   {
+    "name": "Trippy Spin",
+    "note": "The orbit this is built on."
+   },
+   {
+    "name": "Ninja Star",
+    "note": "Where the gap comes from."
+   },
+   {
+    "name": "Gaps",
+    "note": "Reading a gap before you commit to it."
+   },
+   {
+    "name": "Trippy Figure 8",
+    "note": "The same spin carried across two objects."
+   }
   ],
   "sources": [],
   "page": null,
