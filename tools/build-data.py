@@ -87,6 +87,28 @@ for t in tricks:
     t.update(extra)
     enriched += 1
 
+# Corrections to book tricks, merged over the extract field by field. Applied
+# after the slug guard so an override can never be what makes a slug move, and
+# after enrichment so a corrected `inputs` wins over the authored one.
+try:
+    overrides = json.load(open("trick-overrides.json", encoding="utf-8"))
+except IOError:
+    overrides = {}
+overrides.pop("_note", None)
+by_slug = {t["slug"]: t for t in tricks}
+fixed = 0
+for slug_key, patch in overrides.items():
+    t = by_slug.get(slug_key)
+    if t is None:
+        raise SystemExit("trick-overrides.json patches '%s', which no trick has" % slug_key)
+    for field in ("name", "page", "pdfPage", "slug"):
+        if field in patch:
+            raise SystemExit("trick-overrides.json must not override %s (on '%s'): "
+                             "the slug carries saved progress and the page has to keep "
+                             "pointing at what was corrected" % (field, slug_key))
+    t.update(patch)
+    fixed += 1
+
 order = ["Beginner", "Novice", "Intermediate", "Advanced", "Master"]
 tricks.sort(key=lambda t: (order.index(t["difficulty"]), t["page"] or 0))
 
@@ -111,7 +133,7 @@ with io.open(OUT, "w", encoding="utf-8", newline="\n") as f:
         f.write("const %s = %s;\n" % (key.upper(),
                 json.dumps(data[key], ensure_ascii=False, separators=(",", ":"))))
 
-print("%d tricks (%d from the book, %d added on the site, %d enriched), "
+print("%d tricks (%d from the book, %d added on the site, %d enriched, %d corrected), "
       "%d cross-links, %d glossary, %d sources -> %.0f KB"
-      % (len(tricks), len(tricks) - len(extra_tricks), len(extra_tricks), enriched, linked,
+      % (len(tricks), len(tricks) - len(extra_tricks), len(extra_tricks), enriched, fixed, linked,
          len(front["glossary"]), len(front["sources"]), os.path.getsize(OUT) / 1024))

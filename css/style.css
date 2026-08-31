@@ -494,6 +494,14 @@ svg.sticks { width: 112px; height: auto; display: block; }
 .sources-line b { color: var(--ink); font-weight: 600; }
 .sources-line .added { font-style: italic; }
 
+/* An entry whose text differs from the page it links to in the book */
+.corrected {
+  border-left: 3px solid var(--accent); background: var(--accent-wash);
+  padding: .6rem .9rem; border-radius: 0 8px 8px 0;
+  font-size: .85rem; color: var(--ink);
+}
+.corrected b { color: var(--accent-deep); }
+
 /* ── Progression ───────────────────────────────────────────────────── */
 .bar { height: 7px; border-radius: 4px; background: var(--line); overflow: hidden; }
 .bar > i { display: block; height: 100%; background: var(--accent); border-radius: 4px; }
