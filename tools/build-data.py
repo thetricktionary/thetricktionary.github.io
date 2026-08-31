@@ -13,6 +13,16 @@ def slug(name):
     return s
 
 
+# Tricks the book does not have. The PDF extractors rewrite tricks.json wholesale
+# from the printed pages, so anything hand-authored has to live outside it or it
+# would be lost the next time the book is re-read. Same shape as a book trick,
+# plus addedOnSite, and with page/pdfPage null since there is no page to link to.
+try:
+    extra_tricks = json.load(open("extra-tricks.json", encoding="utf-8"))
+except IOError:
+    extra_tricks = []
+tricks += extra_tricks
+
 by_name = {}
 for t in tricks:
     t["slug"] = slug(t["name"])
@@ -101,6 +111,7 @@ with io.open(OUT, "w", encoding="utf-8", newline="\n") as f:
         f.write("const %s = %s;\n" % (key.upper(),
                 json.dumps(data[key], ensure_ascii=False, separators=(",", ":"))))
 
-print("%d tricks (%d enriched), %d cross-links, %d glossary, %d sources -> %.0f KB"
-      % (len(tricks), enriched, linked, len(front["glossary"]), len(front["sources"]),
-         os.path.getsize(OUT) / 1024))
+print("%d tricks (%d from the book, %d added on the site, %d enriched), "
+      "%d cross-links, %d glossary, %d sources -> %.0f KB"
+      % (len(tricks), len(tricks) - len(extra_tricks), len(extra_tricks), enriched, linked,
+         len(front["glossary"]), len(front["sources"]), os.path.getsize(OUT) / 1024))

@@ -1,0 +1,52 @@
+[
+ {
+  "name": "Trippy Figure 8",
+  "difficulty": "Advanced",
+  "category": "Orbitals",
+  "howto": "A trippy spin carried across two objects. Set up as you would for a trippy spin on the first pole, inverted with the object held at the top of the frame, and orbit it. Where the two objects come closest, cross the waist and swap both sticks, so the orbit unwinds and rewinds the other way around the second pole. The ground track comes out as a figure 8, and the reversal at the crossing is what makes it one rather than two orbits flown back to back.",
+  "mastery": [
+   "Link an orbit of each object with a reversal between them.",
+   "Even loops either side, the reversal clean and the objects framed.",
+   "Continuous figure 8, both objects locked top-center throughout."
+  ],
+  "steps": [
+   "Climb inverted up between the two objects",
+   "Trippy orbit the first, roll and yaw opposite ways",
+   "At the waist, swap both sticks to reverse the spin",
+   "Hold the reversed orbit round the second object",
+   "Unwind and fly out over the back"
+  ],
+  "inputs": [
+   { "L": [[0, 1]], "R": null, "Lh": true, "Rh": false },
+   { "L": [[-1, 0]], "R": [[1, 0]], "Lh": false, "Rh": false },
+   { "L": [[1, 0]], "R": [[-1, 0]], "Lh": false, "Rh": false },
+   { "L": [[1, 0]], "R": [[-1, 0]], "Lh": true, "Rh": true },
+   { "L": [[0, 1]], "R": null, "Lh": true, "Rh": false }
+  ],
+  "prereqs": [
+   "A solid Trippy Spin either direction",
+   "Comfortable reversing a coordinated roll and yaw"
+  ],
+  "practice": "Two poles or posts a few metres apart, with clear air around both. Fly a trippy spin on each object on its own first, in both directions, before joining them. The reversal at the waist is the hard part: get it happening at the same place every time, because that is what keeps the two loops even.",
+  "mistakes": [
+   "Reversing early or late, so the loops come out lopsided",
+   "Losing the second object while the spin is unwinding",
+   "Dropping the inverted hang through the reversal",
+   "Objects too far apart to cross the waist without a straight run"
+  ],
+  "variations": [
+   { "name": "Trippy Spin", "note": "One object, no reversal." },
+   { "name": "Trippy Switch", "note": "The reversal on its own, around a single object." }
+  ],
+  "related": [
+   { "name": "Trippy Spin", "note": "The orbit each half is built from." },
+   { "name": "Trippy Switch", "note": "Where the direction change comes from." },
+   { "name": "Pole Dance", "note": "Upright orbits of a single pole." },
+   { "name": "Orbits", "note": "The upright, ground-level version." }
+  ],
+  "sources": [],
+  "page": null,
+  "pdfPage": null,
+  "addedOnSite": true
+ }
+]
