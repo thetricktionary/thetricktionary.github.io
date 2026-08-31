@@ -193,7 +193,7 @@ function loadIso() {
   if (isoState !== 'idle') return;
   isoState = 'loading';
   var s = document.createElement('script');
-  s.src = 'js/iso.js?v=13';
+  s.src = 'js/iso.js?v=15';
   s.onerror = function () { isoState = 'failed'; paintIso(); };
   document.head.appendChild(s);
 }
@@ -550,18 +550,27 @@ function openTrick(t) {
     '</div>' +
     /* The book links each source label in its footer; so does this. Labels
        without a URL in the dataset still print, as they do on the page. */
-    '<div class="sources-line"><b>Sources:</b> ' + t.sources.map(function (label) {
+    /* A trick added on the site has no book sources, so the label is dropped
+       rather than left standing over nothing. */
+    '<div class="sources-line">' + (t.sources.length ? '<b>Sources:</b> ' : '') +
+    t.sources.map(function (label) {
       var hit = (t.links || []).filter(function (l) { return l.label === label; })[0];
       return hit
         ? '<a href="' + esc(hit.url) + '" target="_blank" rel="noopener">' + esc(label) + '</a>'
         : esc(label);
     }).join(' &middot; ') +
-      ' <span class="sep">&nbsp;|&nbsp;</span> ' +
       /* #page= takes the physical page, which is what pdfPage counts; the
          printed folio is what the reader sees, so show that. Viewers that
-         ignore the fragment just open the book at the front. */
-      '<a href="' + PDF_HREF + '#page=' + t.pdfPage + '" target="_blank" rel="noopener">' +
-        'The Tricktionary v1.0, p.' + t.page + '</a></div>';
+         ignore the fragment just open the book at the front.
+
+         A trick added on the site has no page in the book, so it says so
+         instead of linking to one that does not exist. */
+      (t.page
+        ? ' <span class="sep">&nbsp;|&nbsp;</span> ' +
+          '<a href="' + PDF_HREF + '#page=' + t.pdfPage + '" target="_blank" rel="noopener">' +
+            'The Tricktionary v1.0, p.' + t.page + '</a>'
+        : '<span class="added">Added on the site, not in The Tricktionary v1.0</span>') +
+      '</div>';
 
   $('#trickDetail').innerHTML = html;
   $('#trickDetail').hidden = false;

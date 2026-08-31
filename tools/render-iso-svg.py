@@ -228,8 +228,14 @@ def main():
 
     # The site keys entries by a slug of the printed trick name; the renderer
     # keys scenes by dataset id. canonical_name is the bridge between them.
-    site = json.load(open(os.path.join(os.path.dirname(os.path.abspath(__file__)),
-                                       "tricks.json"), encoding="utf-8"))
+    here = os.path.dirname(os.path.abspath(__file__))
+    site = json.load(open(os.path.join(here, "tricks.json"), encoding="utf-8"))
+    # Tricks added on the site rather than read out of the book still get their
+    # scene from the same place, so they are wanted here too.
+    try:
+        site += json.load(open(os.path.join(here, "extra-tricks.json"), encoding="utf-8"))
+    except IOError:
+        pass
     wanted = {slug(t["name"]): t["name"] for t in site}
 
     out, missing, unused = {}, [], []

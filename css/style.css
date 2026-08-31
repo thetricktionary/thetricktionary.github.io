@@ -492,6 +492,7 @@ svg.sticks { width: 112px; height: auto; display: block; }
 
 .sources-line { color: var(--muted); font-size: .82rem; margin-top: 1rem; }
 .sources-line b { color: var(--ink); font-weight: 600; }
+.sources-line .added { font-style: italic; }
 
 /* ── Progression ───────────────────────────────────────────────────── */
 .bar { height: 7px; border-radius: 4px; background: var(--line); overflow: hidden; }
