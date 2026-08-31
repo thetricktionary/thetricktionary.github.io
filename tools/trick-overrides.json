@@ -1,0 +1,97 @@
+{
+ "_note": [
+  "Corrections to tricks the book got wrong, keyed by slug and merged over the",
+  "PDF extract field by field. tricks.json is rewritten wholesale every time the",
+  "book is re-read, so a correction made there would not survive; this is where",
+  "it lives instead.",
+  "",
+  "Only list the fields that are actually wrong: everything else keeps coming",
+  "from the book, so a later re-extraction still improves those. Never override",
+  "name, page or pdfPage. The slug comes from the name and a user's saved stars",
+  "are keyed by it, and the page reference has to keep pointing at the page the",
+  "text was corrected against.",
+  "",
+  "corrected is shown on the entry, because the linked PDF page still carries",
+  "the old description and a silent contradiction is worse than a stated one."
+ ],
+
+ "rubik-s-cube": {
+  "corrected": "The book has this as one turn on each axis: flip, flat yaw, roll. It is a 180 flip, a full roll held inverted, then a second 180 flip the same way.",
+  "howto": "A forward 180 flip to inverted, a full 360 roll held there, then a second forward 180 flip the same way round and back upright. Both flips go forward and both go the same way, which is what makes this one continuous puzzle rather than a flip and a roll flown back to back. The quad is inverted for the whole of the roll, and that is the part that catches people out: the roll has to be flown upside down, on a line, without the flip either side of it drifting.",
+  "mastery": [
+   "Flip, roll and flip again without falling out of it.",
+   "Both flips the same way, the roll clean and inverted.",
+   "Seamless Rubik's Cube, one line, no pause between the three."
+  ],
+  "steps": [
+   "Snap a forward 180 flip, to inverted",
+   "Hold it there and roll a full 360",
+   "Another forward 180 the same way, back upright"
+  ],
+  "inputs": [
+   { "L": null, "R": [[0, 1]], "Lh": false, "Rh": false },
+   { "L": null, "R": [[1, 0]], "Lh": false, "Rh": false },
+   { "L": null, "R": [[0, 1]], "Lh": false, "Rh": false }
+  ],
+  "prereqs": [
+   "Clean flips and rolls on their own",
+   "Comfortable rolling while inverted"
+  ],
+  "practice": "Open air with height to spare, because the middle of this is flown upside down. Get the inverted roll on its own first: half flip, roll, half flip back, slowly. Then join them up. Keeping both flips going the same way is the whole trick; taking the second one back the way you came is a different, easier move.",
+  "mistakes": [
+   "Taking the second flip back the other way, which undoes it rather than completing it",
+   "Rolling before the first flip has finished, so the roll is not truly inverted",
+   "Drifting off line through the inverted roll",
+   "Losing height in the middle and running out of room for the second flip"
+  ],
+  "variations": [
+   { "name": "Cubik's Rube", "note": "The same shape with the axes swapped." },
+   { "name": "Rubik's Cube Pendulum", "note": "A Rubik's Cube swung on a pendulum." }
+  ],
+  "related": [
+   { "name": "Cubik's Rube", "note": "Roll, flip, roll instead." },
+   { "name": "Flip", "note": "The pitch axis on its own." },
+   { "name": "Roll", "note": "The roll axis on its own." }
+  ]
+ },
+
+ "cubik-s-rube": {
+  "corrected": "The book has this as one turn on each axis: roll, flat yaw, flip. It is a 180 roll, a full flip held inverted, then a second 180 roll the same way.",
+  "howto": "The Rubik's Cube with the axes swapped. A 180 roll to inverted, a forward 360 flip held there, then a second 180 roll the same way round and back upright. Same shape, same rhythm, the other axis doing the work. As with the Rubik's Cube, both outer turns go the same way: rolling back the way you came is a different move.",
+  "mastery": [
+   "Roll, flip and roll again without falling out of it.",
+   "Both rolls the same way, the flip clean and inverted.",
+   "Seamless Cubik's Rube, one line, no pause between the three."
+  ],
+  "steps": [
+   "Snap a 180 roll, to inverted",
+   "Hold it there and flip a forward 360",
+   "Another 180 roll the same way, back upright"
+  ],
+  "inputs": [
+   { "L": null, "R": [[1, 0]], "Lh": false, "Rh": false },
+   { "L": null, "R": [[0, 1]], "Lh": false, "Rh": false },
+   { "L": null, "R": [[1, 0]], "Lh": false, "Rh": false }
+  ],
+  "prereqs": [
+   "Clean rolls and flips on their own",
+   "Comfortable flipping while inverted"
+  ],
+  "practice": "Same drill as the Rubik's Cube, the other way up. Half roll, flip, half roll back, slowly, with height to spare. The inverted flip is the part to get comfortable with before you try to run the three together.",
+  "mistakes": [
+   "Taking the second roll back the other way, which undoes it rather than completing it",
+   "Starting the flip before the roll has finished",
+   "Drifting off line through the inverted flip",
+   "Losing height in the middle and running out of room for the second roll"
+  ],
+  "variations": [
+   { "name": "Rubik's Cube", "note": "The same shape with the axes swapped." },
+   { "name": "Rubik's Cube Pendulum", "note": "The combo on a pendulum swing." }
+  ],
+  "related": [
+   { "name": "Rubik's Cube", "note": "Flip, roll, flip instead." },
+   { "name": "Roll", "note": "The roll axis on its own." },
+   { "name": "Flip", "note": "The pitch axis on its own." }
+  ]
+ }
+}

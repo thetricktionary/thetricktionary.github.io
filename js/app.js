@@ -193,7 +193,7 @@ function loadIso() {
   if (isoState !== 'idle') return;
   isoState = 'loading';
   var s = document.createElement('script');
-  s.src = 'js/iso.js?v=15';
+  s.src = 'js/iso.js?v=16';
   s.onerror = function () { isoState = 'failed'; paintIso(); };
   document.head.appendChild(s);
 }
@@ -508,6 +508,11 @@ function openTrick(t) {
       '</div>' +
     '</div>' +
     '<div class="detail-grid">' +
+      /* The linked page in the book still carries the old description, so a
+         corrected entry says so rather than quietly contradicting it. */
+      (t.corrected
+        ? '<div class="corrected span-all"><b>Corrected on the site.</b> ' + esc(t.corrected) + '</div>'
+        : '') +
       '<section class="panel span-all"><div class="hero">' +
         '<div>' + isoSlot(t.slug, 'iso-panel', true) + '</div>' +
         '<div><h3 class="mod-h">How to</h3><p class="howto">' + esc(t.howto) + '</p></div>' +
