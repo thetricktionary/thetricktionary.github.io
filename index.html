@@ -24,7 +24,7 @@
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 <meta name="apple-mobile-web-app-title" content="Tricktionary">
-<link rel="stylesheet" href="css/style.css?v=19">
+<link rel="stylesheet" href="css/style.css?v=20">
 <script>
   /* Set the theme before first paint so a dark-mode load never flashes white.
      Dark is the default; light is only used if it was explicitly chosen. */
@@ -118,24 +118,29 @@
 
     <section class="panel filters">
       <input type="search" id="trickSearch" placeholder="Search names, how-to, prerequisites, mistakes... (e.g. powerloop, rewind, inverted)" autocomplete="off">
-      <div class="filter-row">
-        <div class="filter-label">Difficulty</div>
-        <div class="chips" id="diffChips"></div>
-      </div>
-      <div class="filter-row">
-        <div class="filter-label">Category</div>
-        <div class="chips" id="catChips"></div>
-      </div>
-      <div class="filter-row">
-        <div class="filter-label">Progress</div>
-        <div class="chips" id="progChips"></div>
-      </div>
       <div class="filter-foot">
         <span id="resultCount"></span>
         <span class="foot-actions">
+          <button class="mini" id="btnFilters" aria-expanded="false" aria-controls="filterFly" title="Filter by difficulty, category and progress">Filters<span class="n" id="filterCount" hidden></span></button>
           <button class="mini" id="btnRandomTrick" title="Jump to a random trick from the current filter">Surprise me</button>
           <button class="mini" id="btnClearFilters" title="Clear the search and every filter">Reset</button>
         </span>
+      </div>
+      <!-- The chip rows fly out over the cards rather than sitting above them,
+           so the first screen is the search box and the tricks themselves. -->
+      <div class="filter-fly" id="filterFly" hidden>
+        <div class="filter-row">
+          <div class="filter-label">Difficulty</div>
+          <div class="chips" id="diffChips"></div>
+        </div>
+        <div class="filter-row">
+          <div class="filter-label">Category</div>
+          <div class="chips" id="catChips"></div>
+        </div>
+        <div class="filter-row">
+          <div class="filter-label">Progress</div>
+          <div class="chips" id="progChips"></div>
+        </div>
       </div>
     </section>
 
@@ -333,8 +338,8 @@
 
 <div id="toast"></div>
 
-<script src="js/data.js?v=19"></script>
-<script src="js/app.js?v=19"></script>
+<script src="js/data.js?v=20"></script>
+<script src="js/app.js?v=20"></script>
 
 <!-- Default Statcounter code for The Tricktionary
 https://thetricktionary.github.io/ -->

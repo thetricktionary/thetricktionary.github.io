@@ -403,6 +403,17 @@ function renderChips() {
     chip('Not started', 'todo', 'prog', null) +
     chip('In progress', 'started', 'prog', null) +
     chip('Mastered', 'mastered', 'prog', null);
+
+  /* the chips are tucked away in the fly-out, so the button says how many
+     are narrowing the list */
+  var on = ['diff', 'cat', 'prog'].filter(function (k) { return filters[k]; }).length;
+  $('#filterCount').textContent = on;
+  $('#filterCount').hidden = !on;
+}
+
+function setFilterFly(open) {
+  $('#filterFly').hidden = !open;
+  $('#btnFilters').setAttribute('aria-expanded', open ? 'true' : 'false');
 }
 
 /* ── "missing a trick?" tile ──────────────────────────────────────────── */
@@ -1085,6 +1096,20 @@ function init() {
     filters = { q: '', diff: '', cat: '', prog: '' };
     $('#trickSearch').value = '';
     renderList();
+  });
+  $('#btnFilters').addEventListener('click', function () {
+    setFilterFly($('#filterFly').hidden);
+  });
+  /* the fly-out stays open while chips are picked; a click anywhere else, or
+     Escape, puts it away. The path is read rather than e.target.closest()
+     because picking a chip re-renders the chips, detaching the target. */
+  document.addEventListener('click', function (e) {
+    var path = e.composedPath();
+    if (!$('#filterFly').hidden && path.indexOf($('#filterFly')) < 0 &&
+        path.indexOf($('#btnFilters')) < 0) setFilterFly(false);
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape' && !$('#filterFly').hidden) { setFilterFly(false); $('#btnFilters').focus(); }
   });
   $('#btnRandomTrick').addEventListener('click', function () {
     var hits = TRICKS.filter(matches);

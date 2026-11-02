@@ -240,6 +240,23 @@ input[type=checkbox] { accent-color: var(--accent); }
   font-size: .82rem; color: var(--muted); flex-wrap: wrap;
 }
 .foot-actions { display: flex; gap: .4rem; }
+#btnFilters .n {
+  display: inline-block; min-width: 1.3em; margin-left: .35em; padding: 0 .3em;
+  border-radius: 999px; background: var(--accent); color: var(--accent-ink);
+  font-size: .72rem; font-weight: 700; text-align: center;
+}
+#btnFilters .n[hidden] { display: none; }
+#btnFilters[aria-expanded="true"] { border-color: var(--accent); color: var(--accent); }
+/* The chip rows drop down from the panel's bottom edge over the cards, so
+   opening them never shoves the list down the page. */
+.filters { position: relative; }
+.filter-fly {
+  position: absolute; top: calc(100% + .4rem); right: 0; z-index: 40;
+  width: min(620px, 100%); padding: .2rem .9rem .9rem;
+  background: var(--panel); border: 1px solid var(--line); border-radius: 10px;
+  box-shadow: 0 8px 24px var(--shadow);
+}
+.filter-fly[hidden] { display: none; }
 
 /* ── Trick cards ───────────────────────────────────────────────────── */
 .trick-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: .8rem; }
