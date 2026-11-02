@@ -6,10 +6,14 @@
 <title>The Tricktionary</title>
 <!-- The quad mark, same as .brand-logo below. The SVG is the real icon; the
      .ico and the touch icon are fallbacks, because Safari ignores SVG favicons
-     and a bare /favicon.ico request would otherwise 404. All are generated
-     from one geometry by tools/make-icons.py. -->
+     and a bare /favicon.ico request would otherwise 404. The 192 and 512 PNGs
+     are what Chrome's "Add to Home screen" uses: it skips the SVG and will not
+     scale up a 32px icon, so without them the shortcut gets a letter tile.
+     All are generated from one geometry by tools/make-icons.py. -->
 <link rel="icon" href="favicon.ico?v=19" sizes="32x32">
 <link rel="icon" type="image/svg+xml" href="favicon.svg?v=19">
+<link rel="icon" type="image/png" sizes="192x192" href="assets/icon-192.png?v=19">
+<link rel="icon" type="image/png" sizes="512x512" href="assets/icon-512.png?v=19">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png?v=19">
 <meta name="description" content="A visual field guide to FPV freestyle tricks: 143 tricks with flight paths, control inputs, how-to, and a learning progression you can tick off. Works offline.">
 <meta name="theme-color" content="#131211" media="(prefers-color-scheme: dark)">
