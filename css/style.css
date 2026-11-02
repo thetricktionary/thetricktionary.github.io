@@ -386,7 +386,9 @@ input[type=checkbox] { accent-color: var(--accent); }
 .detail-head { margin-bottom: 1rem; }
 .detail-head h2 { margin: 0 0 .4rem; font-size: 1.9rem; letter-spacing: -.02em; color: var(--ink); }
 .detail-head .tc-meta { display: flex; align-items: center; gap: .45rem; flex-wrap: wrap; }
-.detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 1rem; align-items: start; }
+/* min() lets the column shrink below 320px on a narrow phone (iPhone with
+   Display Zoom is 320px wide) instead of pushing the panels off the right edge */
+.detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(320px, 100%), 1fr)); gap: 1rem; align-items: start; }
 .detail-grid .panel { margin: 0; }
 .span-all { grid-column: 1 / -1; }
 .howto { font-size: .98rem; line-height: 1.6; margin: 0; }
