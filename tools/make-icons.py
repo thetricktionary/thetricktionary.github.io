@@ -68,6 +68,8 @@ def main():
         p = os.path.join(ASSETS, name)
         img = draw(size)
         if name == "apple-touch-icon.png":
+            # at the root, where iOS looks for it when the link tag is ignored
+            p = os.path.join(ROOT, name)
             # iOS squares off and drops transparency anyway, so give it the
             # page's own near-black rather than letting it composite on white
             bg = Image.new("RGBA", img.size, (19, 18, 17, 255))
