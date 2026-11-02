@@ -344,6 +344,7 @@ function showTab(name) {
 function closeMore() {
   $('#moreSheet').classList.remove('open');
   $('.tabs [data-tab="settings"]').classList.remove('sheet-open');
+  $('.tabs').classList.remove('more-open');
 }
 
 /* ── routing ──────────────────────────────────────────────────────────── */
@@ -1071,6 +1072,7 @@ function init() {
         var sheet = $('#moreSheet');
         sheet.classList.toggle('open');
         b.classList.toggle('sheet-open', sheet.classList.contains('open'));
+        $('.tabs').classList.toggle('more-open', sheet.classList.contains('open'));
         return;
       }
       location.hash = name;
